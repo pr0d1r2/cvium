@@ -43,3 +43,9 @@
 @./set/skills/dx.md
 @./set/skills/direnv.md
 @./set/skills/dotfile.md
+@./set/skills/opensource/licensing.md
+@./set/skills/opensource/documentation.md
+@./set/skills/opensource/secrets.md
+@./set/skills/opensource/personal-data.md
+@./set/skills/opensource/repo-scaffold.md
+@./set/skills/opensource/attribution.md

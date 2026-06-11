@@ -20,6 +20,8 @@ Typst CV compiles to PDF + plain text, auto-rebuilds on commit via lefthook, man
 - C12: QR code on CV links to this repo's latest release PDF
 - C13: CHANGELOG.md updated on every change
 - C14: (skill: tdd) Every script in scripts/ has matching bats test in tests/
+- C15: (skill: opensource/licensing) MIT licensed
+- C16: (skill: opensource/personal-data) CV contains author PII by design — exception to no-PII rule
 
 ## §I Interfaces
 
@@ -75,6 +77,7 @@ Typst CV compiles to PDF + plain text, auto-rebuilds on commit via lefthook, man
 - V25: (skill: sh) no shell functions in scripts/*.sh
 - V26: (skill: just) justfile recipes in alphabetical order
 - V27: no merged commits on feature branches (pre-rebase guard)
+- V28: (skill: opensource/repo-scaffold) .gitattributes marks generated files
 
 ## §T Tasks
 
@@ -108,6 +111,9 @@ Typst CV compiles to PDF + plain text, auto-rebuilds on commit via lefthook, man
 | T26 | . | add tests/build.bats, tests/watch.bats, tests/format.bats, tests/lint.bats, tests/text.bats (1-to-1) | V19,C14 |
 | T27 | . | add narrow-language dictionary for CV domain terms | V22 |
 | T28 | . | (skill: direnv) add .envrc with `use flake` and watch | C5 |
+| T29 | . | (skill: opensource/licensing) add MIT LICENSE | C15 |
+| T30 | . | (skill: opensource/repo-scaffold) add .gitattributes marking cv.pdf as binary/generated | V28 |
+| T31 | . | (skill: opensource/documentation) add CONTRIBUTING.md | V17 |
 
 ### T4 detail — lefthook remotes
 
