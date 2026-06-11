@@ -168,7 +168,7 @@ Typst CV compiles to PDF + plain text. Auto-rebuilds on commit. Nix flake produc
 | T45 | x | (skill: nix/modularity, direnv) extract flake shellHook to nix/dev/shell.sh, add .envrc watch_file | C21,V35 |
 | T46 | x | (skill: test/bats-with-libraries) drop manual BATS_LIB_PATH from flake.nix | C22,V36 |
 | T47 | x | (skill: opensource/ci) add devShells.ci (no shellHook) | C23,V37 |
-| T48 | . | (skill: opensource/repo-scaffold) add cachix nixConfig + public key to flake | C24 |
+| T48 | x | (skill: opensource/repo-scaffold) add cachix nixConfig + public key to flake | C24 |
 | T49 | . | (nix-lefthook-gitleaks) add .gitleaks.toml allowlist | V43 |
 | T50 | . | (skill: opensource/repo-scaffold) add cachix-check.sh | V44 |
 | T51 | . | (skill: opensource/licensing) add content-license note — tooling MIT, cv.typ content reserved | C19 |

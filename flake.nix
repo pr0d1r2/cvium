@@ -1,6 +1,11 @@
 {
   description = "cvium — Marcin Nowicki's CV, built with Typst";
 
+  nixConfig = {
+    extra-substituters = "https://pr0d1r2.cachix.org";
+    extra-trusted-public-keys = "pr0d1r2.cachix.org-1:NfWjbhgAj41byXhCKiaE+av3Vnphm1fTezHXEGsiQIM=";
+  };
+
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     flake-utils.url = "github:numtide/flake-utils";
