@@ -60,3 +60,6 @@
 @./set/skills/portability.md
 @./set/skills/semble.md
 @./set/skills/rtk.md
+@./set/skills/update/update.md
+@./set/skills/update/modularity.md
+@./set/skills/update/security.md
