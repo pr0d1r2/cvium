@@ -39,3 +39,4 @@
 @./set/skills/ci/cd.md
 @./set/skills/ci/full-commit-sha.md
 @./set/skills/ci/multi-platform-gate.md
+@./set/skills/streamline.md
