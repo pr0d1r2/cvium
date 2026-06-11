@@ -52,3 +52,8 @@
 @./set/skills/security/security.md
 @./set/skills/security/auth-hygiene.md
 @./set/skills/security/personal.md
+@./set/skills/gnu/gnu.md
+@./set/skills/gnu/grep.md
+@./set/skills/gnu/sed.md
+@./set/skills/gnu/find.md
+@./set/skills/gnu/coreutils.md
