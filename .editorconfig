@@ -14,9 +14,15 @@ indent_size = 4
 indent_style = space
 indent_size = 2
 
-[*.{md,yml,yaml,json,jsonc,toml}]
+[*.{yml,yaml,json,jsonc,toml}]
 indent_style = space
 indent_size = 2
+
+# Markdown list continuation indent is marker-width-driven (3 spaces
+# under "1. "), not a fixed size. Leave indent size unenforced.
+[*.md]
+indent_style = space
+indent_size = unset
 
 [*.typ]
 indent_style = space

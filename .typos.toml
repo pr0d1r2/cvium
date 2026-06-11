@@ -1,0 +1,7 @@
+# Generated and binary artifacts are not source — do not spell-check.
+[files]
+extend-exclude = ["cv.pdf", "avatar.png", "cv.txt", "flake.lock"]
+
+# Proper nouns the CV references verbatim.
+[default.extend-words]
+Distribusion = "Distribusion"
