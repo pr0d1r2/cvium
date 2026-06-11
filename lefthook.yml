@@ -1,0 +1,14 @@
+---
+pre-commit:
+  parallel: true
+  commands:
+    rebuild:
+      glob: "cv.typ"
+      run: timeout ${LEFTHOOK_REBUILD_TIMEOUT:-30} bash scripts/hooks/rebuild.sh
+
+pre-push:
+  parallel: true
+  commands:
+    rebuild:
+      glob: "cv.typ"
+      run: timeout ${LEFTHOOK_REBUILD_TIMEOUT:-30} bash scripts/hooks/rebuild.sh
