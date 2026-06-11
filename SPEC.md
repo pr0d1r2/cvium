@@ -73,7 +73,7 @@ Typst CV compiles to PDF + plain text, auto-rebuilds on commit via lefthook, man
 - V23: commit messages follow conventional format
 - V24: (skill: linter) all files in repo covered by at least one linter
 - V25: (skill: sh) no shell functions in scripts/*.sh
-- V26: justfile recipes in alphabetical order
+- V26: (skill: just) justfile recipes in alphabetical order
 - V27: no merged commits on feature branches (pre-rebase guard)
 
 ## §T Tasks
