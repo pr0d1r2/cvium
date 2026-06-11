@@ -1,0 +1,15 @@
+# gitleaks config — extends the built-in ruleset.
+# Run via the nix-lefthook-gitleaks remote.
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Known-safe public values"
+# The Cachix public key is public by design (it verifies the cache).
+regexes = [
+  '''pr0d1r2\.cachix\.org-1:[A-Za-z0-9+/=]+''',
+]
+paths = [
+  '''flake\.lock''',
+]

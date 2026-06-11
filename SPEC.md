@@ -151,7 +151,7 @@ Typst CV compiles to PDF + plain text. Auto-rebuilds on commit. Nix flake produc
 | T28 | x | (skill: direnv) add .envrc with `use flake` and watch | C5 |
 | T29 | x | (skill: opensource/licensing) add MIT LICENSE | C15 |
 | T30 | x | (skill: opensource/repo-scaffold) add .gitattributes marking cv.pdf as binary/generated | V28 |
-| T31 | . | (skill: opensource/documentation) add CONTRIBUTING.md | V17 |
+| T31 | x | (skill: opensource/documentation) add CONTRIBUTING.md | V17 |
 | T32 | x | (skill: opensource/repo-scaffold) add .gitignore (nix, claude, result) | V28 |
 | T33 | x | (skill: git, opensource/personal-data) git-filter-repo strip phone from history — replace-text on cv.typ/cv.txt/SPEC.md, path-remove cv.pdf from all history then regen clean (pdf phone is compressed, regex misses it); via nix-shell -p git-filter-repo; before first push | C18,V32 |
 | T34 | . | add optional phone sys-input to cv.typ (absent → omit line) so cv.local overlay can inject it; phone removal itself done by T33 | C17,V29 |
@@ -160,16 +160,16 @@ Typst CV compiles to PDF + plain text. Auto-rebuilds on commit. Nix flake produc
 | T37 | . | gitignore cv.local.typ, cv.local.pdf | V33 |
 | T38 | x | regen cv.pdf/cv.txt phone-free, verify pdftotext extract has no phone digits | V30,V31 |
 | T39 | x | (skill: opensource/documentation) add README.md — personal scope, badge row, page-1 preview, content-license note | I.file.readme,V17,V38 |
-| T40 | . | (skill: opensource/documentation) add HARDENING.md documenting PII contact-tier decision | I.file.hardening,V39 |
-| T41 | . | (skill: opensource/attribution) add ATTRIBUTION.md | I.file.attribution,V40 |
-| T42 | . | add SECURITY.md vuln-report policy | I.file.security,V41 |
-| T43 | . | add CODE_OF_CONDUCT.md (Contributor Covenant) | I.file.coc,V42 |
-| T44 | . | add .github/ISSUE_TEMPLATE + PULL_REQUEST_TEMPLATE.md | I.github.templates |
+| T40 | x | (skill: opensource/documentation) add HARDENING.md documenting PII contact-tier decision | I.file.hardening,V39 |
+| T41 | x | (skill: opensource/attribution) add ATTRIBUTION.md | I.file.attribution,V40 |
+| T42 | x | add SECURITY.md vuln-report policy | I.file.security,V41 |
+| T43 | x | add CODE_OF_CONDUCT.md (Contributor Covenant) | I.file.coc,V42 |
+| T44 | x | add .github/ISSUE_TEMPLATE + PULL_REQUEST_TEMPLATE.md | I.github.templates |
 | T45 | x | (skill: nix/modularity, direnv) extract flake shellHook to nix/dev/shell.sh, add .envrc watch_file | C21,V35 |
 | T46 | x | (skill: test/bats-with-libraries) drop manual BATS_LIB_PATH from flake.nix | C22,V36 |
 | T47 | x | (skill: opensource/ci) add devShells.ci (no shellHook) | C23,V37 |
 | T48 | x | (skill: opensource/repo-scaffold) add cachix nixConfig + public key to flake | C24 |
-| T49 | . | (nix-lefthook-gitleaks) add .gitleaks.toml allowlist | V43 |
+| T49 | x | (nix-lefthook-gitleaks) add .gitleaks.toml allowlist | V43 |
 | T50 | . | (skill: opensource/repo-scaffold) add cachix-check.sh | V44 |
 | T51 | x | (skill: opensource/licensing) add content-license note — tooling MIT, cv.typ content reserved | C19 |
 | T52 | x | (skill: lefthook/wrapper-flake-inputs) fix flake.nix — inputsFrom nix-lefthook.devShells.ci instead of packages.default (recovers 16 wrappers) | V45,B1 |
