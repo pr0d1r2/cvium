@@ -70,7 +70,7 @@ Typst CV compiles to PDF + plain text, auto-rebuilds on commit via lefthook, man
 - V20: cv.pdf size under 500KB (guard bloat)
 - V21: flake.lock node count within budget
 - V22: no invisible Unicode characters in source files
-- V23: commit messages follow conventional format
+- V23: (skill: language/imperative) commit messages follow conventional format
 - V24: (skill: linter) all files in repo covered by at least one linter
 - V25: (skill: sh) no shell functions in scripts/*.sh
 - V26: (skill: just) justfile recipes in alphabetical order

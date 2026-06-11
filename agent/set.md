@@ -27,3 +27,9 @@
 @./set/skills/test/bats-with-libraries.md
 @./set/skills/product/spec.md
 @./set/skills/product/product.md
+@./set/skills/language/language.md
+@./set/skills/language/narrow.md
+@./set/skills/language/concise.md
+@./set/skills/language/imperative.md
+@./set/skills/language/active.md
+@./set/skills/language/operator.md
