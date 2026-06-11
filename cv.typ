@@ -84,7 +84,7 @@
   "2022.04 – Present",
 )
 #bullet[Built company-wide CI system from scratch, migrating from GitHub Actions to a unified pipeline serving all engineering teams.]
-#bullet[Building agentic AI developer tooling ecosystem — declarative agent configuration, autonomous agent nodes, cross-agent memory, and 30+ composable Nix-based CI checks (open-source).]
+#bullet[Building agentic AI developer tooling ecosystem (open-source) — autonomous NixOS agent nodes that open PRs, run specs, and maintain 30+ repositories independently; declarative agent configuration; cross-agent persistent memory.]
 #bullet[Shaped engineering behavior through high-level BDD frameworks — used RSpec tooling to resolve cross-team communication issues with the Data Team.]
 #bullet[Created Sentry notification and triage system adopted as seed pattern across Engineering.]
 #bullet[Scaled impact from single team to entire engineering org — established processes enabling promotions, provided pair programming support and ad-hoc issue resolution company-wide.]
