@@ -62,7 +62,7 @@
     )
     v(0.4em)
     text(size: 8.5pt, fill: muted)[
-      marcin\@prodix.pl #h(0.8em)  #h(0.8em)
+      marcin\@prodix.pl #h(0.8em)
       Częstochowa, Poland #h(0.8em)
       github.com/pr0d1r2 #h(0.8em)
       linkedin.com/in/pr0d1r2

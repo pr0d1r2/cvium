@@ -1,7 +1,7 @@
                      Marcin Nowicki
                      Staff Software Engineer — CI/CD & Developer Tooling
 
-                     marcin@prodix.pl      Częstochowa, Poland   github.com/pr0d1r2   linkedin.com/in/pr0d1r2
+                     marcin@prodix.pl   Częstochowa, Poland   github.com/pr0d1r2   linkedin.com/in/pr0d1r2
 
                      Engineer with 30+ years in technology — all remote — building CI/CD infrastructure and developer
                      tooling at scale. Coordinated with 200+ engineers across organizations at Toptal, built company-wide
@@ -11,7 +11,7 @@
 EXPERIENCE
 
 
-Operational Staff Engineer → Lead Engineer                                                                  2022.04 – Present
+Operational Staff Engineer → Lead Engineer                                                                   2022.04 – Present
 
 Oyster HR — Entire Engineering / Total Rewards Team
 
@@ -25,7 +25,7 @@ Oyster HR — Entire Engineering / Total Rewards Team
 • Scaled impact from single team to entire engineering org — established processes enabling promotions, provided pair
   programming support and ad-hoc issue resolution company-wide.
 
-Senior Back-End Engineer                                                                                    2020.10 – 2022.02
+Senior Back-End Engineer                                                                                     2020.10 – 2022.02
 
 Toptal — Goldsmiths Team
 
@@ -34,7 +34,7 @@ Toptal — Goldsmiths Team
 • Created custom RuboCop cops preventing anti-patterns in implementation and specs company-wide.
 • Drove GraphQL standardization across the company through RFC processes.
 
-Technical Team Lead / Manager                                                                               2019.08 – 2020.10
+Technical Team Lead / Manager                                                                                2019.08 – 2020.10
 
 Toptal — Billing Extraction Team
 
@@ -44,7 +44,7 @@ Toptal — Billing Extraction Team
 • Split team into Back-End and Front-End; found and trained two successor Team Leads. Managed OKRs/KPIs and
   engineer career paths.
 
-Technical Team Lead / Manager → Senior Back-End Engineer                                                    2016.03 – 2019.06
+Technical Team Lead / Manager → Senior Back-End Engineer                                                     2016.03 – 2019.06
 
 Toptal — Verticalization Team
 
@@ -54,7 +54,7 @@ Toptal — Verticalization Team
 • Led company-wide spec performance refactor saving six-figure annual infrastructure costs.
 • Implemented company-wide abilities system around verticals. Found and trained successor Team Lead.
 
-Senior Back-End Engineer                                                                                    2014.10 – 2017.01
+Senior Back-End Engineer                                                                                     2014.10 – 2017.01
 
 Distribusion Technologies
 

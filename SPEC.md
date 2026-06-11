@@ -98,10 +98,10 @@ Typst CV compiles to PDF + plain text. Auto-rebuilds on commit. Nix flake produc
 - V26: (skill: just) justfile recipes in alphabetical order
 - V27: (nix-lefthook-pre-rebase-merged-commits) no merged commits on feature branches
 - V28: (skill: opensource/repo-scaffold) .gitattributes marks generated files
-- V29: public cv.typ has no phone — `grep -c '' cv.typ` == 0
-- V30: committed cv.pdf phone-free — `pdftotext cv.pdf - | grep -c ` == 0
-- V31: committed cv.txt phone-free — `grep -c  cv.txt` == 0
-- V32: (skill: git) phone absent from full git history — `git log --all -S ''` empty
+- V29: public cv.typ has no phone number (contact line is email + links only)
+- V30: committed cv.pdf phone-free — pdftotext extract has no phone digits
+- V31: committed cv.txt phone-free — text export has no phone digits
+- V32: (skill: git) phone absent from full git history — a `git log --all -S` search for the phone digits returns no commits
 - V33: cv.local.typ gitignored, never tracked
 - V34: (skill: opensource/secrets) cv.local.example.typ tracked with placeholder phone
 - V35: (skill: nix/modularity) no embedded shell in flake.nix — shellHook reads nix/dev/shell.sh
@@ -152,12 +152,12 @@ Typst CV compiles to PDF + plain text. Auto-rebuilds on commit. Nix flake produc
 | T30 | x | (skill: opensource/repo-scaffold) add .gitattributes marking cv.pdf as binary/generated | V28 |
 | T31 | . | (skill: opensource/documentation) add CONTRIBUTING.md | V17 |
 | T32 | x | (skill: opensource/repo-scaffold) add .gitignore (nix, claude, result) | V28 |
-| T33 | . | (skill: git, opensource/personal-data) git-filter-repo strip phone from history — replace-text on cv.typ/cv.txt, path-remove+regen cv.pdf/cv.txt (pdf phone is compressed, regex misses it); via nix-shell -p git-filter-repo; before first push | C18,V32 |
+| T33 | ~ | (skill: git, opensource/personal-data) git-filter-repo strip phone from history — replace-text on cv.typ/cv.txt/SPEC.md, path-remove cv.pdf from all history then regen clean (pdf phone is compressed, regex misses it); via nix-shell -p git-filter-repo; before first push | C18,V32 |
 | T34 | . | remove phone from cv.typ, add optional phone sys-input (absent → omit line) | C17,V29 |
 | T35 | . | add cv.local.typ overlay (gitignored) + cv.local.example.typ placeholder | C17,V33,V34 |
 | T36 | . | add just build-local + scripts/build-local.sh — full PDF with phone, uncommitted | C17,I.cli.buildlocal |
 | T37 | . | gitignore cv.local.typ, cv.local.pdf | V33 |
-| T38 | . | regen cv.pdf/cv.txt phone-free, verify pdftotext grep  == 0 | V30,V31 |
+| T38 | . | regen cv.pdf/cv.txt phone-free, verify pdftotext extract has no phone digits | V30,V31 |
 | T39 | . | (skill: opensource/documentation) add README.md — personal scope, badge row, page-1 preview, content-license note | I.file.readme,V17,V38 |
 | T40 | . | (skill: opensource/documentation) add HARDENING.md documenting PII contact-tier decision | I.file.hardening,V39 |
 | T41 | . | (skill: opensource/attribution) add ATTRIBUTION.md | I.file.attribution,V40 |
