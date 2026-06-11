@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
 
+### Changed
+
+- 2-space indent is the editorconfig default everywhere unless overridden
+- shfmt runs flagless to honor `.editorconfig` (upstream wrapper fix:
+  pr0d1r2/nix-lefthook-shfmt#13)
+
 ### Fixed
 
 - Consume nix-lefthook ci devShell via inputsFrom so hook wrappers
@@ -20,6 +26,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
 ### Added
 
+- `just photo <url>` — fetch a profile avatar (e.g. github.com/user),
+  scale + optimize it, rebuild the CV, and commit on success
+- Real GitHub avatar on the CV, pngquant-optimized
 - Typst CV source targeting Staff/L5 CI infrastructure roles
 - Nix flake dev shell with typst, lefthook, just, bats, GNU tools
 - justfile with build/watch/format/lint/test/text recipes
