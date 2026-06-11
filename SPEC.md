@@ -19,7 +19,7 @@ Typst CV compiles to PDF + plain text, auto-rebuilds on commit via lefthook, man
 - C11: All links in PDF are clickable hyperlinks
 - C12: QR code on CV links to this repo's latest release PDF
 - C13: CHANGELOG.md updated on every change
-- C14: Every script in scripts/ has matching bats test in tests/
+- C14: (skill: tdd) Every script in scripts/ has matching bats test in tests/
 
 ## §I Interfaces
 
@@ -66,7 +66,7 @@ Typst CV compiles to PDF + plain text, auto-rebuilds on commit via lefthook, man
 - V16: GitHub Actions build matches local build (reproducible)
 - V17: README.md contains preview image of page 1
 - V18: CHANGELOG.md touched on every commit with changes
-- V19: every scripts/*.sh has matching tests/*.bats (1-to-1 coverage)
+- V19: (skill: tdd) every scripts/*.sh has matching tests/*.bats (1-to-1 coverage)
 - V20: cv.pdf size under 500KB (guard bloat)
 - V21: flake.lock node count within budget
 - V22: no invisible Unicode characters in source files
