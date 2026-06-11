@@ -19,3 +19,6 @@
 @./set/skills/lefthook/output.md
 @./set/skills/lefthook/conditional.md
 @./set/skills/lefthook/wrapper-flake-inputs.md
+@./set/skills/nix/flake.md
+@./set/skills/nix/develop.md
+@./set/skills/nix/modularity.md
