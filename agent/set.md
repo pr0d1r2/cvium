@@ -42,3 +42,4 @@
 @./set/skills/streamline.md
 @./set/skills/dx.md
 @./set/skills/direnv.md
+@./set/skills/dotfile.md
