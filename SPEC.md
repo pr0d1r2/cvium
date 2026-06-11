@@ -114,7 +114,7 @@ Typst CV compiles to PDF + plain text. Auto-rebuilds on commit. Nix flake produc
 | T29 | . | (skill: opensource/licensing) add MIT LICENSE | C15 |
 | T30 | . | (skill: opensource/repo-scaffold) add .gitattributes marking cv.pdf as binary/generated | V28 |
 | T31 | . | (skill: opensource/documentation) add CONTRIBUTING.md | V17 |
-| T32 | . | (skill: opensource/repo-scaffold) add .gitignore (nix, claude, result) | V28 |
+| T32 | x | (skill: opensource/repo-scaffold) add .gitignore (nix, claude, result) | V28 |
 
 ### T4 detail — lefthook remotes
 
