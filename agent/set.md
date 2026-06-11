@@ -3,3 +3,4 @@
 @./set/skills/skill.md
 @./set/skills/sh.md
 @./set/skills/tdd.md
+@./set/skills/linter.md
