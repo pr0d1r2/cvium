@@ -12,7 +12,6 @@
 
   outputs =
     {
-      self,
       nixpkgs,
       flake-utils,
       nix-lefthook,
@@ -22,35 +21,33 @@
       system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
-        lefthook = nix-lefthook.packages.${system}.default;
-        batsWithLibs = pkgs.bats.withLibraries (p: [
-          p.bats-support
-          p.bats-assert
-          p.bats-file
-        ]);
+        ci = nix-lefthook.devShells.${system}.ci;
+        tools = [
+          pkgs.typstyle
+          pkgs.tinymist
+          pkgs.git
+          pkgs.just
+          pkgs.shellcheck
+          pkgs.shfmt
+          pkgs.poppler-utils
+          pkgs.gnugrep
+          pkgs.gnused
+          pkgs.findutils
+          pkgs.coreutils
+        ];
       in
       {
-        devShells.default = pkgs.mkShell {
-          packages = [
-            lefthook
-            batsWithLibs
-            pkgs.typst
-            pkgs.typstyle
-            pkgs.tinymist
-            pkgs.git
-            pkgs.just
-            pkgs.shellcheck
-            pkgs.shfmt
-            pkgs.poppler-utils
-            pkgs.gnugrep
-            pkgs.gnused
-            pkgs.findutils
-            pkgs.coreutils
-          ];
-          BATS_LIB_PATH = "${batsWithLibs}/share/bats";
-          shellHook = ''
-            lefthook install
-          '';
+        devShells = {
+          ci = pkgs.mkShell {
+            inputsFrom = [ ci ];
+            packages = tools;
+          };
+
+          default = pkgs.mkShell {
+            inputsFrom = [ ci ];
+            packages = tools;
+            shellHook = builtins.readFile ./nix/dev/shell.sh;
+          };
         };
       }
     );
