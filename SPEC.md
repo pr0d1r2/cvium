@@ -107,6 +107,7 @@ Typst CV compiles to PDF + plain text, auto-rebuilds on commit via lefthook, man
 | T25 | . | add bats test: QR code present in PDF | V14 |
 | T26 | . | add tests/build.bats, tests/watch.bats, tests/format.bats, tests/lint.bats, tests/text.bats (1-to-1) | V19,C14 |
 | T27 | . | add narrow-language dictionary for CV domain terms | V22 |
+| T28 | . | (skill: direnv) add .envrc with `use flake` and watch | C5 |
 
 ### T4 detail — lefthook remotes
 

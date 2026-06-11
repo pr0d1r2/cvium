@@ -41,3 +41,4 @@
 @./set/skills/ci/multi-platform-gate.md
 @./set/skills/streamline.md
 @./set/skills/dx.md
+@./set/skills/direnv.md
