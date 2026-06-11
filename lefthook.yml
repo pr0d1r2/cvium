@@ -77,6 +77,7 @@ _exclude_artifacts: &exclude_artifacts
   - "avatar.png"
   - "cv.txt"
   - "flake.lock"
+  - "docs/preview-page1.png"
 
 pre-commit:
   parallel: true

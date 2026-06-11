@@ -141,7 +141,7 @@ Typst CV compiles to PDF + plain text. Auto-rebuilds on commit. Nix flake produc
 | T18 | x | add plain text export script (PDF → txt via pdftotext or typst query) | I.cli.text,V13 |
 | T19 | x | (skill: ci/ci, ci/full-commit-sha) add .github/workflows/build.yml — build on push, verify PDF matches, pin actions to full SHA | I.ci.build,V16,C10 |
 | T20 | x | (skill: ci/cd) add .github/workflows/release.yml — on tag, create release with cv.pdf | I.ci.release,C10 |
-| T21 | . | add README.md with PDF preview screenshot of page 1 | I.file.readme,V17 |
+| T21 | x | add README.md with PDF preview screenshot of page 1 | I.file.readme,V17 |
 | T22 | . | add bats test: cv.txt not stale vs cv.typ | V13 |
 | T23 | . | add bats test: nix build succeeds | V11 |
 | T24 | . | add bats test: links in PDF are hyperlinks | V12 |
@@ -159,7 +159,7 @@ Typst CV compiles to PDF + plain text. Auto-rebuilds on commit. Nix flake produc
 | T36 | . | add just build-local + scripts/build-local.sh — full PDF with phone, uncommitted | C17,I.cli.buildlocal |
 | T37 | . | gitignore cv.local.typ, cv.local.pdf | V33 |
 | T38 | x | regen cv.pdf/cv.txt phone-free, verify pdftotext extract has no phone digits | V30,V31 |
-| T39 | . | (skill: opensource/documentation) add README.md — personal scope, badge row, page-1 preview, content-license note | I.file.readme,V17,V38 |
+| T39 | x | (skill: opensource/documentation) add README.md — personal scope, badge row, page-1 preview, content-license note | I.file.readme,V17,V38 |
 | T40 | . | (skill: opensource/documentation) add HARDENING.md documenting PII contact-tier decision | I.file.hardening,V39 |
 | T41 | . | (skill: opensource/attribution) add ATTRIBUTION.md | I.file.attribution,V40 |
 | T42 | . | add SECURITY.md vuln-report policy | I.file.security,V41 |
@@ -171,7 +171,7 @@ Typst CV compiles to PDF + plain text. Auto-rebuilds on commit. Nix flake produc
 | T48 | x | (skill: opensource/repo-scaffold) add cachix nixConfig + public key to flake | C24 |
 | T49 | . | (nix-lefthook-gitleaks) add .gitleaks.toml allowlist | V43 |
 | T50 | . | (skill: opensource/repo-scaffold) add cachix-check.sh | V44 |
-| T51 | . | (skill: opensource/licensing) add content-license note — tooling MIT, cv.typ content reserved | C19 |
+| T51 | x | (skill: opensource/licensing) add content-license note — tooling MIT, cv.typ content reserved | C19 |
 | T52 | x | (skill: lefthook/wrapper-flake-inputs) fix flake.nix — inputsFrom nix-lefthook.devShells.ci instead of packages.default (recovers 16 wrappers) | V45,B1 |
 | T53 | . | upstream pr0d1r2/nix-lefthook — expose wrappers as individual packages.lefthook-* (NOT fatten ci — bloats all consumers); keep ci lean; cvium then composes exact 34. Repos for all ~18 missing exist | V45,B1 |
 | T54 | x | (strategy B) lean-trim lefthook.yml to 16 bundle-backed remotes (swap markdownlint→markdownlint-agentic); defer 18 to T52/T53; restore per-task as wrappers land | V45,B1 |
