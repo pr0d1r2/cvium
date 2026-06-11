@@ -13,17 +13,20 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
-      - uses: cachix/install-nix-action@v31
+      - uses: pr0d1r2/nix-lefthook-ci-action@ce9a118b05e90e186dba48a82067adeed185f7d4
         with:
-          extra_nix_config: |
-            experimental-features = nix-command flakes
-      - name: Build PDF
-        run: nix develop --command bash scripts/build.sh
-      - name: Generate text
-        run: nix develop --command bash scripts/text.sh
+          devshell: ci
+          skip-build: "true"
+          skip-lefthook: "true"
+          accept-flake-config: "true"
+          cachix-cache: pr0d1r2
+          cachix-auth-token: ${{ secrets.CACHIX_AUTH_TOKEN }}
+      - name: Build CV
+        run: |
+          nix develop .#ci --accept-flake-config --command bash scripts/build.sh
+          nix develop .#ci --accept-flake-config --command bash scripts/text.sh
       - name: Create release
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@3bb12739c298aeb8a4eeaf626c5b8d85266b0e65
         with:
           files: |
             cv.pdf

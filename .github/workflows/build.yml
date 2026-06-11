@@ -9,45 +9,33 @@ on:
   workflow_dispatch:
 
 jobs:
-  build-linux:
+  check-linux:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
-      - uses: cachix/install-nix-action@v31
+      - uses: pr0d1r2/nix-lefthook-ci-action@ce9a118b05e90e186dba48a82067adeed185f7d4
         with:
-          extra_nix_config: |
-            experimental-features = nix-command flakes
-      - name: Build PDF
-        run: nix develop --command bash scripts/build.sh
-      - name: Generate text
-        run: nix develop --command bash scripts/text.sh
-      - name: Verify PDF not stale
+          devshell: ci
+          skip-build: "true"
+          accept-flake-config: "true"
+          cachix-cache: pr0d1r2
+          cachix-auth-token: ${{ secrets.CACHIX_AUTH_TOKEN }}
+      - name: Build CV and verify content not stale
         run: |
-          nix develop --command bash scripts/build.sh
-          git diff --exit-code cv.pdf || (echo "cv.pdf is stale" && exit 1)
-      - name: Verify text not stale
-        run: |
-          nix develop --command bash scripts/text.sh
-          git diff --exit-code cv.txt || (echo "cv.txt is stale" && exit 1)
-      - name: Install lefthook remotes
-        run: TERM=dumb nix develop --ignore-environment --keep TERM --command lefthook install
-      - name: Pre-commit checks
-        run: TERM=dumb nix develop --ignore-environment --keep TERM --command bash -c 'lefthook run pre-commit --all-files'
-      - name: Pre-push checks
-        run: TERM=dumb nix develop --ignore-environment --keep TERM --command bash -c 'lefthook run pre-push --all-files'
+          nix develop .#ci --accept-flake-config --command bash scripts/build.sh
+          nix develop .#ci --accept-flake-config --command bash -c \
+            'pdftotext -layout cv.pdf - | diff - cv.txt'
 
-  build-macos:
-    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+  check-darwin:
+    needs: check-linux
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v6
-      - uses: cachix/install-nix-action@v31
+      - uses: pr0d1r2/nix-lefthook-ci-action@ce9a118b05e90e186dba48a82067adeed185f7d4
         with:
-          extra_nix_config: |
-            experimental-features = nix-command flakes
-      - name: Build PDF
-        run: nix develop --command bash scripts/build.sh
-      - name: Verify PDF not stale
-        run: |
-          nix develop --command bash scripts/build.sh
-          git diff --exit-code cv.pdf || (echo "cv.pdf is stale" && exit 1)
+          devshell: ci
+          skip-build: "true"
+          skip-lefthook: "true"
+          accept-flake-config: "true"
+          cachix-cache: pr0d1r2
+          cachix-auth-token: ${{ secrets.CACHIX_AUTH_TOKEN }}
+      - name: Build CV on macOS
+        run: nix develop .#ci --accept-flake-config --command bash scripts/build.sh
