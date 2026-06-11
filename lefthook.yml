@@ -5,6 +5,9 @@ pre-commit:
     rebuild:
       glob: "cv.typ"
       run: timeout ${LEFTHOOK_REBUILD_TIMEOUT:-30} bash scripts/hooks/rebuild.sh
+    typstyle:
+      glob: "*.typ"
+      run: timeout ${LEFTHOOK_TYPSTYLE_TIMEOUT:-10} typstyle check {staged_files}
 
 pre-push:
   parallel: true
@@ -12,3 +15,6 @@ pre-push:
     rebuild:
       glob: "cv.typ"
       run: timeout ${LEFTHOOK_REBUILD_TIMEOUT:-30} bash scripts/hooks/rebuild.sh
+    typstyle:
+      glob: "*.typ"
+      run: timeout ${LEFTHOOK_TYPSTYLE_TIMEOUT:-10} typstyle check {push_files}
