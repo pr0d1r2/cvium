@@ -64,3 +64,4 @@
 @./set/skills/update/modularity.md
 @./set/skills/update/security.md
 @./set/skills/opensource/ci.md
+@./set/skills/product/plan.md
