@@ -22,6 +22,14 @@ Typst CV compiles to PDF + plain text. Auto-rebuilds on commit. Nix flake produc
 - C14: (skill: tdd) Every script in scripts/ has matching bats test in tests/
 - C15: (skill: opensource/licensing) MIT licensed
 - C16: (skill: opensource/personal-data) CV contains author PII by design — exception to no-PII rule
+- C17: (skill: opensource/personal-data) Public cv.typ has NO phone — phone in gitignored cv.local.typ overlay only (email + links stay public)
+- C18: (skill: git) Phone scrubbed from full git history before first push — rewrite window open while no remote
+- C19: (skill: opensource/licensing) Personal CV, not template — tooling MIT, cv.typ content not licensed for reuse
+- C20: (skill: opensource/documentation) Required OSS root docs all present: README, CONTRIBUTING, HARDENING, ATTRIBUTION, SECURITY, CODE_OF_CONDUCT
+- C21: (skill: nix/modularity) No embedded shell in flake.nix — shellHook extracted to nix/dev/shell.sh
+- C22: (skill: test/bats-with-libraries) No manual BATS_LIB_PATH — withLibraries wrapper only
+- C23: (skill: opensource/ci) Two devShells — ci (no shellHook) + default
+- C24: (skill: opensource/repo-scaffold) flake nixConfig declares cachix cache + public key
 
 ## §I Interfaces
 
@@ -47,6 +55,18 @@ Typst CV compiles to PDF + plain text. Auto-rebuilds on commit. Nix flake produc
 - I.file.readme: `README.md` — with PDF preview screenshot
 - I.file.ci: `.github/workflows/build.yml` — CI workflow
 - I.file.changelog: `CHANGELOG.md` — tracks changes
+- I.file.hardening: `HARDENING.md` — security posture + PII contact-tier decision
+- I.file.attribution: `ATTRIBUTION.md` — typst, nixpkgs, nix-lefthook, set-and-setting
+- I.file.security: `SECURITY.md` — vuln-report policy
+- I.file.coc: `CODE_OF_CONDUCT.md` — Contributor Covenant
+- I.file.contributing: `CONTRIBUTING.md` — setup, test, style, commits
+- I.file.local: `cv.local.typ` — gitignored phone overlay (direct-send only)
+- I.file.localexample: `cv.local.example.typ` — tracked placeholder phone
+- I.cli.buildlocal: `just build-local` — full PDF with phone, never committed
+- I.nix.shell: `nix/dev/shell.sh` — extracted shellHook
+- I.file.gitleaks: `.gitleaks.toml` — gitleaks allowlist (remote: nix-lefthook-gitleaks)
+- I.file.cachixcheck: `cachix-check.sh` — verify binary cache per system
+- I.github.templates: `.github/ISSUE_TEMPLATE/`, `.github/PULL_REQUEST_TEMPLATE.md`
 
 ## §V Invariants
 
@@ -78,6 +98,23 @@ Typst CV compiles to PDF + plain text. Auto-rebuilds on commit. Nix flake produc
 - V26: (skill: just) justfile recipes in alphabetical order
 - V27: (nix-lefthook-pre-rebase-merged-commits) no merged commits on feature branches
 - V28: (skill: opensource/repo-scaffold) .gitattributes marks generated files
+- V29: public cv.typ has no phone — `grep -c '' cv.typ` == 0
+- V30: committed cv.pdf phone-free — `pdftotext cv.pdf - | grep -c ` == 0
+- V31: committed cv.txt phone-free — `grep -c  cv.txt` == 0
+- V32: (skill: git) phone absent from full git history — `git log --all -S ''` empty
+- V33: cv.local.typ gitignored, never tracked
+- V34: (skill: opensource/secrets) cv.local.example.typ tracked with placeholder phone
+- V35: (skill: nix/modularity) no embedded shell in flake.nix — shellHook reads nix/dev/shell.sh
+- V36: (skill: test/bats-with-libraries) no BATS_LIB_PATH assignment in flake.nix
+- V37: (skill: opensource/ci) flake exposes devShells.ci and devShells.default
+- V38: README has badge row + page-1 preview + content-license note
+- V39: HARDENING.md documents PII contact-tier decision
+- V40: (skill: opensource/attribution) ATTRIBUTION.md lists typst, nixpkgs, nix-lefthook, set-and-setting
+- V41: SECURITY.md present with vuln-report policy
+- V42: CODE_OF_CONDUCT.md present
+- V43: (nix-lefthook-gitleaks) .gitleaks.toml present, gitleaks remote passes
+- V44: cachix-check.sh verifies cache per system
+- V45: (skill: lefthook/wrapper-flake-inputs) every git_url remote in lefthook.yml has matching wrapper in devShell — `lefthook run pre-commit --all-files` yields zero exit-127
 
 ## §T Tasks
 
@@ -115,12 +152,35 @@ Typst CV compiles to PDF + plain text. Auto-rebuilds on commit. Nix flake produc
 | T30 | x | (skill: opensource/repo-scaffold) add .gitattributes marking cv.pdf as binary/generated | V28 |
 | T31 | . | (skill: opensource/documentation) add CONTRIBUTING.md | V17 |
 | T32 | x | (skill: opensource/repo-scaffold) add .gitignore (nix, claude, result) | V28 |
+| T33 | . | (skill: git, opensource/personal-data) git-filter-repo strip phone from history — replace-text on cv.typ/cv.txt, path-remove+regen cv.pdf/cv.txt (pdf phone is compressed, regex misses it); via nix-shell -p git-filter-repo; before first push | C18,V32 |
+| T34 | . | remove phone from cv.typ, add optional phone sys-input (absent → omit line) | C17,V29 |
+| T35 | . | add cv.local.typ overlay (gitignored) + cv.local.example.typ placeholder | C17,V33,V34 |
+| T36 | . | add just build-local + scripts/build-local.sh — full PDF with phone, uncommitted | C17,I.cli.buildlocal |
+| T37 | . | gitignore cv.local.typ, cv.local.pdf | V33 |
+| T38 | . | regen cv.pdf/cv.txt phone-free, verify pdftotext grep  == 0 | V30,V31 |
+| T39 | . | (skill: opensource/documentation) add README.md — personal scope, badge row, page-1 preview, content-license note | I.file.readme,V17,V38 |
+| T40 | . | (skill: opensource/documentation) add HARDENING.md documenting PII contact-tier decision | I.file.hardening,V39 |
+| T41 | . | (skill: opensource/attribution) add ATTRIBUTION.md | I.file.attribution,V40 |
+| T42 | . | add SECURITY.md vuln-report policy | I.file.security,V41 |
+| T43 | . | add CODE_OF_CONDUCT.md (Contributor Covenant) | I.file.coc,V42 |
+| T44 | . | add .github/ISSUE_TEMPLATE + PULL_REQUEST_TEMPLATE.md | I.github.templates |
+| T45 | . | (skill: nix/modularity, direnv) extract flake shellHook to nix/dev/shell.sh, add .envrc watch_file | C21,V35 |
+| T46 | . | (skill: test/bats-with-libraries) drop manual BATS_LIB_PATH from flake.nix | C22,V36 |
+| T47 | . | (skill: opensource/ci) add devShells.ci (no shellHook) | C23,V37 |
+| T48 | . | (skill: opensource/repo-scaffold) add cachix nixConfig + public key to flake | C24 |
+| T49 | . | (nix-lefthook-gitleaks) add .gitleaks.toml allowlist | V43 |
+| T50 | . | (skill: opensource/repo-scaffold) add cachix-check.sh | V44 |
+| T51 | . | (skill: opensource/licensing) add content-license note — tooling MIT, cv.typ content reserved | C19 |
+| T52 | . | (skill: lefthook/wrapper-flake-inputs) fix flake.nix — inputsFrom nix-lefthook.devShells.ci instead of packages.default (recovers 16 wrappers) | V45,B1 |
+| T53 | . | upstream pr0d1r2/nix-lefthook — expose wrappers as individual packages.lefthook-* (NOT fatten ci — bloats all consumers); keep ci lean; cvium then composes exact 34. Repos for all ~18 missing exist | V45,B1 |
+| T54 | x | (strategy B) lean-trim lefthook.yml to 16 bundle-backed remotes (swap markdownlint→markdownlint-agentic); defer 18 to T52/T53; restore per-task as wrappers land | V45,B1 |
 
 ### T4 detail — lefthook remotes
 
 All remotes configured for both pre-commit and pre-push per skill:lefthook.
 
 **Nix checks:**
+
 - `nix-lefthook-nixfmt` — format flake.nix
 - `nix-lefthook-statix` — lint flake.nix
 - `nix-lefthook-deadnix` — dead code in flake.nix
@@ -130,20 +190,24 @@ All remotes configured for both pre-commit and pre-push per skill:lefthook.
 - `nix-lefthook-nix-flake-lock-budget` — guard flake.lock size/node count
 
 **Shell checks:**
+
 - `nix-lefthook-shellcheck` — lint scripts/*.sh
 - `nix-lefthook-shfmt` — format scripts/*.sh
 - `nix-lefthook-no-shell-functions` — no functions in scripts/*.sh
 
 **Justfile checks:**
+
 - `nix-lefthook-justfile-no-embedded-shell` — enforce C7
 - `nix-lefthook-justfile-alphabetical` — recipe order
 
 **YAML/TOML/Markdown:**
+
 - `nix-lefthook-yamllint` — lint YAML files
 - `nix-lefthook-taplo` — lint TOML files (if any)
 - `nix-lefthook-markdownlint` — lint README.md, SPEC.md, CHANGELOG.md
 
 **Text hygiene:**
+
 - `nix-lefthook-typos` — spell check all files
 - `nix-lefthook-trailing-whitespace` — no trailing whitespace
 - `nix-lefthook-missing-final-newline` — all files end with newline
@@ -151,6 +215,7 @@ All remotes configured for both pre-commit and pre-push per skill:lefthook.
 - `nix-lefthook-narrow-language` — vocabulary checks for CV domain
 
 **Git hygiene:**
+
 - `nix-lefthook-git-conflict-markers` — no conflict markers
 - `nix-lefthook-git-no-local-paths` — no hardcoded local paths
 - `nix-lefthook-gitleaks` — no secrets in repo
@@ -158,12 +223,14 @@ All remotes configured for both pre-commit and pre-push per skill:lefthook.
 - `nix-lefthook-pre-rebase-merged-commits` — no merged commits on branches
 
 **File checks:**
+
 - `nix-lefthook-editorconfig-checker` — enforce .editorconfig
 - `nix-lefthook-file-size-check` — guard cv.pdf under 500KB
 - `nix-lefthook-linter-coverage-full` — all files covered by linter
 - `nix-lefthook-changelog-touched` — CHANGELOG.md touched on changes
 
 **Bats checks:**
+
 - `nix-lefthook-bats-parse` — validate bats syntax
 - `nix-lefthook-bats-unit` — run bats tests on commit
 - `nix-lefthook-bats-failures-only` — show only failures
@@ -171,6 +238,7 @@ All remotes configured for both pre-commit and pre-push per skill:lefthook.
 - `nix-lefthook-unit-coverage` — 1-to-1 scripts/ ↔ tests/ coverage
 
 **GitHub Actions:**
+
 - `nix-lefthook-actionlint` — lint .github/workflows/*.yml
 - `nix-lefthook-ci-action` — composite action for Nix + lefthook CI
 
@@ -178,3 +246,4 @@ All remotes configured for both pre-commit and pre-push per skill:lefthook.
 
 | id | date | cause | fix |
 |----|------|-------|-----|
+| B1 | 2026-06-11 | flake.nix consumes nix-lefthook.packages.default (lefthook binary only), not devShells.ci → 0 wrappers on PATH; bundle ci shell also missing ~18 of 34 wrappers referenced in lefthook.yml → `lefthook run pre-commit --all-files` yields 56 exit-127. Local-CI gate non-functional; prior commits bypassed hooks | T52 (local inputsFrom), T53 (upstream bundle), V45 |
