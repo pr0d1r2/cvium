@@ -26,10 +26,6 @@ remotes:
     ref: main
     configs:
       - lefthook-remote.yml
-  - git_url: https://github.com/pr0d1r2/nix-lefthook-shfmt
-    ref: main
-    configs:
-      - lefthook-remote.yml
   - git_url: https://github.com/pr0d1r2/nix-lefthook-yamllint
     ref: main
     configs:
@@ -87,6 +83,11 @@ pre-commit:
     typstyle:
       glob: "*.typ"
       run: timeout ${LEFTHOOK_TYPSTYLE_TIMEOUT:-10} typstyle --check {staged_files}
+    # Flagless shfmt honors .editorconfig (2-space). The bundle wrapper
+    # hardcodes -i 4 -ci; track upstream fix in SPEC §T T55.
+    shfmt:
+      glob: "*.sh"
+      run: timeout ${LEFTHOOK_SHFMT_TIMEOUT:-30} shfmt -d {staged_files}
     trailing-whitespace:
       exclude: *exclude_artifacts
     missing-final-newline:
@@ -105,6 +106,9 @@ pre-push:
     typstyle:
       glob: "*.typ"
       run: timeout ${LEFTHOOK_TYPSTYLE_TIMEOUT:-10} typstyle --check {push_files}
+    shfmt:
+      glob: "*.sh"
+      run: timeout ${LEFTHOOK_SHFMT_TIMEOUT:-30} shfmt -d {push_files}
     trailing-whitespace:
       exclude: *exclude_artifacts
     missing-final-newline:
