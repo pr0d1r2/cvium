@@ -102,7 +102,7 @@ Typst CV compiles to PDF + plain text. Auto-rebuilds on commit. Nix flake produc
 | T17 | . | add nix package output: packages.text builds cv.txt derivation | I.nix.text |
 | T18 | x | add plain text export script (PDF → txt via pdftotext or typst query) | I.cli.text,V13 |
 | T19 | x | (skill: ci/ci, ci/full-commit-sha) add .github/workflows/build.yml — build on push, verify PDF matches, pin actions to full SHA | I.ci.build,V16,C10 |
-| T20 | . | (skill: ci/cd) add .github/workflows/release.yml — on tag, create release with cv.pdf | I.ci.release,C10 |
+| T20 | x | (skill: ci/cd) add .github/workflows/release.yml — on tag, create release with cv.pdf | I.ci.release,C10 |
 | T21 | . | add README.md with PDF preview screenshot of page 1 | I.file.readme,V17 |
 | T22 | . | add bats test: cv.txt not stale vs cv.typ | V13 |
 | T23 | . | add bats test: nix build succeeds | V11 |

@@ -1,0 +1,31 @@
+---
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: cachix/install-nix-action@v31
+        with:
+          extra_nix_config: |
+            experimental-features = nix-command flakes
+      - name: Build PDF
+        run: nix develop --command bash scripts/build.sh
+      - name: Generate text
+        run: nix develop --command bash scripts/text.sh
+      - name: Create release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            cv.pdf
+            cv.txt
+          generate_release_notes: true
