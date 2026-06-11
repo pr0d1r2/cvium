@@ -17,6 +17,7 @@ exec bash "$REPO_ROOT/scripts/actual-test.sh"
 ```
 
 Key rules:
+
 - Exit 0 on missing prerequisites (not exit 1 -- that would fail the
   hook)
 - Use short timeouts for SSH reachability checks (3s, not default 30s)
