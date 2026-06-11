@@ -14,6 +14,10 @@ format:
 lint:
     bash scripts/lint.sh
 
+# fetch and optimize CV photo from a url (e.g. https://github.com/user)
+photo url:
+    bash scripts/photo.sh {{url}}
+
 # run bats tests
 test:
     bats tests/

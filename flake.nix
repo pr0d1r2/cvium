@@ -30,6 +30,9 @@
           pkgs.shellcheck
           pkgs.shfmt
           pkgs.poppler-utils
+          pkgs.curl
+          pkgs.imagemagick
+          pkgs.pngquant
           pkgs.gnugrep
           pkgs.gnused
           pkgs.findutils
