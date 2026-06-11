@@ -25,3 +25,5 @@
 @./set/skills/test/coverage.md
 @./set/skills/test/unit.md
 @./set/skills/test/bats-with-libraries.md
+@./set/skills/product/spec.md
+@./set/skills/product/product.md
