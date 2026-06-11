@@ -58,3 +58,5 @@
 @./set/skills/gnu/find.md
 @./set/skills/gnu/coreutils.md
 @./set/skills/portability.md
+@./set/skills/semble.md
+@./set/skills/rtk.md
