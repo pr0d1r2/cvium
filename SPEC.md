@@ -115,6 +115,7 @@ Typst CV compiles to PDF + plain text. Auto-rebuilds on commit. Nix flake produc
 - V43: (nix-lefthook-gitleaks) .gitleaks.toml present, gitleaks remote passes
 - V44: cachix-check.sh verifies cache per system
 - V45: (skill: lefthook/wrapper-flake-inputs) every git_url remote in lefthook.yml has matching wrapper in devShell — `lefthook run pre-commit --all-files` yields zero exit-127
+- V46: (skill: opensource/personal-data) no tracked file embeds the literal secret it tracks — SPEC/docs reference secrets abstractly (no phone digits, keys, tokens in prose or grep patterns)
 
 ## §T Tasks
 
@@ -152,7 +153,7 @@ Typst CV compiles to PDF + plain text. Auto-rebuilds on commit. Nix flake produc
 | T30 | x | (skill: opensource/repo-scaffold) add .gitattributes marking cv.pdf as binary/generated | V28 |
 | T31 | . | (skill: opensource/documentation) add CONTRIBUTING.md | V17 |
 | T32 | x | (skill: opensource/repo-scaffold) add .gitignore (nix, claude, result) | V28 |
-| T33 | ~ | (skill: git, opensource/personal-data) git-filter-repo strip phone from history — replace-text on cv.typ/cv.txt/SPEC.md, path-remove cv.pdf from all history then regen clean (pdf phone is compressed, regex misses it); via nix-shell -p git-filter-repo; before first push | C18,V32 |
+| T33 | x | (skill: git, opensource/personal-data) git-filter-repo strip phone from history — replace-text on cv.typ/cv.txt/SPEC.md, path-remove cv.pdf from all history then regen clean (pdf phone is compressed, regex misses it); via nix-shell -p git-filter-repo; before first push | C18,V32 |
 | T34 | . | remove phone from cv.typ, add optional phone sys-input (absent → omit line) | C17,V29 |
 | T35 | . | add cv.local.typ overlay (gitignored) + cv.local.example.typ placeholder | C17,V33,V34 |
 | T36 | . | add just build-local + scripts/build-local.sh — full PDF with phone, uncommitted | C17,I.cli.buildlocal |
@@ -249,3 +250,4 @@ All remotes configured for both pre-commit and pre-push per skill:lefthook.
 | id | date | cause | fix |
 |----|------|-------|-----|
 | B1 | 2026-06-11 | flake.nix consumes nix-lefthook.packages.default (lefthook binary only), not devShells.ci → 0 wrappers on PATH; bundle ci shell also missing ~18 of 34 wrappers referenced in lefthook.yml → `lefthook run pre-commit --all-files` yields 56 exit-127. Local-CI gate non-functional; prior commits bypassed hooks | T52 (local inputsFrom), T53 (upstream bundle), V45 |
+| B2 | 2026-06-11 | SPEC.md embedded the literal phone digits in V29-V32/T38 grep patterns, re-leaking the secret into git history; a scrub targeting only cv.* would leave the number in the spec and its history | reword invariants digit-free, scrub covered SPEC.md history (T33), V46 |
