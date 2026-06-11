@@ -22,3 +22,6 @@
 @./set/skills/nix/flake.md
 @./set/skills/nix/develop.md
 @./set/skills/nix/modularity.md
+@./set/skills/test/coverage.md
+@./set/skills/test/unit.md
+@./set/skills/test/bats-with-libraries.md
