@@ -5,8 +5,8 @@
 [![Built with Typst](https://img.shields.io/badge/built%20with-Typst-239dad.svg)](https://typst.app)
 [![Nix flake](https://img.shields.io/badge/Nix-flake-5277c3.svg?logo=nixos&logoColor=white)](https://nixos.org)
 
-A two-page CV for Staff / L5 CI-infrastructure and technical-leadership
-roles — and a working demo of the pipeline that builds it.
+A two-page CV for Principal-level agentic-AI and developer-infrastructure
+work — and a working demo of the pipeline that builds it.
 
 [**📄 Download the PDF**](cv.pdf) · [plain text](cv.txt) · [latest release](https://github.com/pr0d1r2/cvium/releases/latest)
 
@@ -14,10 +14,12 @@ roles — and a working demo of the pipeline that builds it.
 
 ## Who
 
-Engineer with 30+ years in technology, exclusively remote — building
-CI/CD infrastructure and developer tooling at scale. Built company-wide
-CI at Oyster, coordinated with 200+ engineers at Toptal, and builds
-agentic AI developer tooling.
+Engineer, 30+ years and still building for the love of it. Built
+company-wide CI at Oyster and coordinated 200+ engineers at Toptal — and,
+on my own time, a composing platform of ~80 repositories in four months:
+a 62-package Nix CI product, an agentic-AI dev toolchain, and reproducible
+NixOS appliances, bootstrapped by a self-built autonomous agent fleet
+(320 repos total).
 
 ## What this repo really is
 

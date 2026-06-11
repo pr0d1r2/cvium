@@ -1,12 +1,14 @@
                      Marcin Nowicki
-                     Staff Software Engineer — CI/CD & Developer Tooling
+                     Principal Engineer — Agentic AI & Developer Infrastructure
 
                      marcin@prodix.pl   Częstochowa, Poland   github.com/pr0d1r2   linkedin.com/in/pr0d1r2
 
-                     Engineer with 30+ years in technology — all remote — building CI/CD infrastructure and developer
-                     tooling at scale. Coordinated with 200+ engineers across organizations at Toptal, built company-wide
-                     CI systems at Oyster, and led teams from inception through self-sufficiency. Passionate about tools that
-                     multiply engineering quality and velocity.
+                     Engineer, 30+ years and still building for the love of it — tools, platforms, and now autonomous agents
+                     that do the work of whole teams. On my own time and fully in the open, I build an agentic AI developer
+                     ecosystem: NixOS agent nodes that open PRs, run specs, and maintain 30+ repositories on their own. At
+                     Oyster I built company-wide CI from scratch; at Toptal I coordinated 200+ engineers through platform
+                     multi-tenancy and turned team knowledge into self-service tools. I build the systems that build and
+                     maintain themselves.
 
 EXPERIENCE
 
@@ -17,8 +19,6 @@ Oyster HR — Entire Engineering / Total Rewards Team
 
 • Built company-wide CI system from scratch, migrating from GitHub Actions to a unified pipeline serving all engineering
   teams.
-• Building agentic AI developer tooling ecosystem (open-source) — autonomous NixOS agent nodes that open PRs, run
-  specs, and maintain 30+ repositories independently; declarative agent configuration; cross-agent persistent memory.
 • Shaped engineering behavior through high-level BDD frameworks — used RSpec tooling to resolve cross-team commu­
   nication issues with the Data Team.
 • Created Sentry notification and triage system adopted as seed pattern across Engineering.
@@ -99,6 +99,14 @@ Freelance PHP Developer / Linux & Network Administrator                         
 • PHP/MySQL projects for local businesses (2000–2006). Managed 2–5 Gentoo Linux servers, 150+ Windows machines
   and WAN at Wyższa Szkoła Zarządzania w Częstochowie (1995–2000).
 
+OPEN SOURCE
+
+• In 2026, built a composing platform of ~80 repositories in four months — a 62-package Nix CI product, an agentic-AI
+  dev toolchain (token optimization, semantic search, embeddings, spec-driven agents), and bootable NixOS appliances —
+  on one reproducible, test-driven spine. 320 repos total.
+• Bootstrapped largely by a self-built autonomous agent fleet: NixOS agent nodes that open PRs, run specs, and maintain
+  repositories independently, with declarative configuration and cross-agent persistent memory. github.com/pr0d1r2
+
 TECHNICAL SKILLS
 
 Languages           Ruby, Shell (bash/zsh), JavaScript/TypeScript, Nix, Python, PHP
@@ -120,5 +128,5 @@ KEY HIGHLIGHTS
 • 30+ years in technology, exclusively remote                  • Built CI systems for entire engineering organizations
 • Coordinated with 200+ engineers at Toptal                    • Scaled teams from scratch (4→16 engineers)
 • Trained 3+ successor technical leads                         • Six-figure annual savings from spec optimization
-• 260+ OSS repos; 30+ composable Nix CI packages               • Building agentic AI developer tooling ecosystem
+• 320 OSS repos; 62-package composable Nix CI platform         • ~80-repo agentic platform built in four months
 

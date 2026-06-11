@@ -58,7 +58,7 @@
     text(
       size: 11pt,
       fill: muted,
-      "Staff Software Engineer — CI/CD & Developer Tooling",
+      "Principal Engineer — Agentic AI & Developer Infrastructure",
     )
     v(0.4em)
     text(size: 8.5pt, fill: muted)[
@@ -69,10 +69,10 @@
     ]
     v(0.35em)
     text(size: 9.2pt)[
-      Engineer with 30+ years in technology — all remote — building CI/CD infrastructure and developer tooling at scale.
-      Coordinated with 200+ engineers across organizations at Toptal,
-      built company-wide CI systems at Oyster, and led teams from inception through self-sufficiency.
-      Passionate about tools that multiply engineering quality and velocity.
+      Engineer, 30+ years and still building for the love of it — tools, platforms, and now autonomous agents that do the work of whole teams.
+      On my own time and fully in the open, I build an agentic AI developer ecosystem: NixOS agent nodes that open PRs, run specs, and maintain 30+ repositories on their own.
+      At Oyster I built company-wide CI from scratch; at Toptal I coordinated 200+ engineers through platform multi-tenancy and turned team knowledge into self-service tools.
+      I build the systems that build and maintain themselves.
     ]
   },
 )
@@ -87,7 +87,6 @@
   "2022.04 – Present",
 )
 #bullet[Built company-wide CI system from scratch, migrating from GitHub Actions to a unified pipeline serving all engineering teams.]
-#bullet[Building agentic AI developer tooling ecosystem (open-source) — autonomous NixOS agent nodes that open PRs, run specs, and maintain 30+ repositories independently; declarative agent configuration; cross-agent persistent memory.]
 #bullet[Shaped engineering behavior through high-level BDD frameworks — used RSpec tooling to resolve cross-team communication issues with the Data Team.]
 #bullet[Created Sentry notification and triage system adopted as seed pattern across Engineering.]
 #bullet[Scaled impact from single team to entire engineering org — established processes enabling promotions, provided pair programming support and ad-hoc issue resolution company-wide.]
@@ -175,6 +174,11 @@
 
 // ── SKILLS ──────────────────────────────────────────────────────────────────
 
+#section("Open Source")
+
+#bullet[In 2026, built a composing platform of \~80 repositories in four months — a 62-package Nix CI product, an agentic-AI dev toolchain (token optimization, semantic search, embeddings, spec-driven agents), and bootable NixOS appliances — on one reproducible, test-driven spine. 320 repos total.]
+#bullet[Bootstrapped largely by a self-built autonomous agent fleet: NixOS agent nodes that open PRs, run specs, and maintain repositories independently, with declarative configuration and cross-agent persistent memory. github.com/pr0d1r2]
+
 #section("Technical Skills")
 
 #grid(
@@ -260,6 +264,6 @@
   bullet[Trained 3+ successor technical leads],
   bullet[Six-figure annual savings from spec optimization],
 
-  bullet[260+ OSS repos; 30+ composable Nix CI packages],
-  bullet[Building agentic AI developer tooling ecosystem],
+  bullet[320 OSS repos; 62-package composable Nix CI platform],
+  bullet[\~80-repo agentic platform built in four months],
 )
