@@ -1,0 +1,123 @@
+                     Marcin Nowicki
+                     Staff Software Engineer — CI/CD & Developer Tooling
+
+                     marcin@prodix.pl      Częstochowa, Poland   github.com/pr0d1r2   linkedin.com/in/pr0d1r2
+
+                     Engineer with 30+ years in technology — all remote — building CI/CD infrastructure and developer
+                     tooling at scale. Coordinated with 200+ engineers across organizations at Toptal, built company-wide
+                     CI systems at Oyster, and led teams from inception through self-sufficiency. Passionate about tools that
+                     multiply engineering quality and velocity.
+
+EXPERIENCE
+
+
+Operational Staff Engineer → Lead Engineer                                                                  2022.04 – Present
+
+Oyster HR — Entire Engineering / Total Rewards Team
+
+• Built company-wide CI system from scratch, migrating from GitHub Actions to a unified pipeline serving all engineering
+  teams.
+• Building agentic AI developer tooling ecosystem (open-source) — autonomous NixOS agent nodes that open PRs, run
+  specs, and maintain 30+ repositories independently; declarative agent configuration; cross-agent persistent memory.
+• Shaped engineering behavior through high-level BDD frameworks — used RSpec tooling to resolve cross-team commu­
+  nication issues with the Data Team.
+• Created Sentry notification and triage system adopted as seed pattern across Engineering.
+• Scaled impact from single team to entire engineering org — established processes enabling promotions, provided pair
+  programming support and ad-hoc issue resolution company-wide.
+
+Senior Back-End Engineer                                                                                    2020.10 – 2022.02
+
+Toptal — Goldsmiths Team
+
+• Built GraphQL generators for types and mutations used by 5+ teams across 12 schemas stitched via Apollo Server —
+  eliminated boilerplate across dozens of teams.
+• Created custom RuboCop cops preventing anti-patterns in implementation and specs company-wide.
+• Drove GraphQL standardization across the company through RFC processes.
+
+Technical Team Lead / Manager                                                                               2019.08 – 2020.10
+
+Toptal — Billing Extraction Team
+
+• Scaled team from 4 to 16 engineers; conducted dozens of technical and cultural interviews. Reported to VP of Engineering
+  on a CEO-priority SOA migration project.
+• Co-built semi-automated “extraction tool” to decouple monolith engine into separate repositories and services.
+• Split team into Back-End and Front-End; found and trained two successor Team Leads. Managed OKRs/KPIs and
+  engineer career paths.
+
+Technical Team Lead / Manager → Senior Back-End Engineer                                                    2016.03 – 2019.06
+
+Toptal — Verticalization Team
+
+• Coordinated with 200+ engineers to implement multi-tenancy support across the entire platform.
+• Created “Vertical Wizard” — codified all multi-tenancy knowledge into a database-driven tool, making the team
+  intentionally redundant (“meta-team” philosophy).
+• Led company-wide spec performance refactor saving six-figure annual infrastructure costs.
+• Implemented company-wide abilities system around verticals. Found and trained successor Team Lead.
+
+Senior Back-End Engineer                                                                                    2014.10 – 2017.01
+
+Distribusion Technologies
+
+• Owned API integrations on transportation platform. Built cross-team developer tooling and championed remote work
+  adoption.
+Ruby on Rails Developer                                                                                    2013.08 – 2014.04
+
+JustGo Music — Social Management Platform
+
+• Integrated multiple external APIs (Facebook, Twitter, Instagram, YouTube, SoundCloud, MixCloud). Metrics via KISS
+  Metrics and Intercom. Hosted on Heroku.
+
+Staff Software Engineer                                                                                    2011.01 – 2013.08
+
+Mamymo — E-commerce Platform
+
+• All four Staff Engineer aspects: Tech Lead, Architect, Solver, Right Hand. Reported to CEO with a 12-person team.
+• Multi-country e-commerce (15 countries, 30 languages, 2–5 brands each) with millions of weekly visits and near-zero
+  downtime tolerance.
+• Integrated multiple shopping APIs with SEM-driven landing pages for Google traffic arbitrage.
+
+Technical Team Lead → Developer                                                                            2008.08 – 2010.03
+
+Studitemps GmbH (Jobmensa.de)
+
+• Led team of 8 as SCRUM Master. Student job outsourcing platform with geolocation.
+
+Ruby on Rails Developer                                                                                    2010.03 – 2010.12
+
+Experteer
+
+• Google-friendly job catalog with cross-site API scraping and MongoDB log statistics aggregation.
+
+Founder / Developer                                                                                        2006.04 – 2008.04
+
+go28days.com — Startup
+
+• Co-founded fertility tracking platform. Custom TeX-based Ruby DSL for charting. Full-stack on Rails 1.x.
+
+Freelance PHP Developer / Linux & Network Administrator                                                         1995 – 2006
+
+• PHP/MySQL projects for local businesses (2000–2006). Managed 2–5 Gentoo Linux servers, 150+ Windows machines
+  and WAN at Wyższa Szkoła Zarządzania w Częstochowie (1995–2000).
+
+TECHNICAL SKILLS
+
+Languages           Ruby, Shell (bash/zsh), JavaScript/TypeScript, Nix, Python, PHP
+Frameworks          Ruby on Rails, RSpec, GraphQL, React.js, Stimulus, Backbone.js
+CI/CD & Testing     Jenkins, GitHub Actions, HarnessCI, RSpec, Minitest, Capybara, Cucumber, Selenium, RuboCop (custom cops)
+Infrastructure      Docker, NixOS, GCP, Terraform, Chef, Ansible, Gentoo/Debian/Alpine Linux
+Data & Search       PostgreSQL, MySQL, MongoDB, ElasticSearch (Chewy), Redis, Memcached
+Architecture        Microservices, SOA, REST, GraphQL (Apollo Federation), Monolith decomposition
+AI & Tooling        Agentic AI infrastructure, Claude Code, LLM token optimization (RTK), Vector stores, BM25, Embeddings
+Leadership          Scaled Scrum, Kanban, LEAN, OKRs/KPIs, Team building (4→16), Technical mentoring
+
+EDUCATION
+
+Electronic Technician, Computer Systems — Techniczne Zakłady Naukowe, Częstochowa                               1997 – 2002
+
+KEY HIGHLIGHTS
+
+• 30+ years in technology, exclusively remote                  • Built CI systems for entire engineering organizations
+• Coordinated with 200+ engineers at Toptal                    • Scaled teams from scratch (4→16 engineers)
+• Trained 3+ successor technical leads                         • Six-figure annual savings from spec optimization
+• 260+ OSS repos; 30+ composable Nix CI packages               • Building agentic AI developer tooling ecosystem
+
