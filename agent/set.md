@@ -33,3 +33,5 @@
 @./set/skills/language/imperative.md
 @./set/skills/language/active.md
 @./set/skills/language/operator.md
+@./set/skills/git.md
+@./set/skills/git/branch.md
