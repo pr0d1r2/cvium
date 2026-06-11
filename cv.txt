@@ -107,7 +107,8 @@ CI/CD & Testing     Jenkins, GitHub Actions, HarnessCI, RSpec, Minitest, Capybar
 Infrastructure      Docker, NixOS, GCP, Terraform, Chef, Ansible, Gentoo/Debian/Alpine Linux
 Data & Search       PostgreSQL, MySQL, MongoDB, ElasticSearch (Chewy), Redis, Memcached
 Architecture        Microservices, SOA, REST, GraphQL (Apollo Federation), Monolith decomposition
-AI & Tooling        Agentic AI infrastructure, Claude Code, LLM token optimization (RTK), Vector stores, BM25, Embeddings
+AI & Tooling        Agentic AI infrastructure, Autonomous Agents, Claude Code, SDD (CAVEKIT), LLM token optimization
+                    (RTK), Vector stores, BM25, Embeddings
 Leadership          Scaled Scrum, Kanban, LEAN, OKRs/KPIs, Team building (4→16), Technical mentoring
 
 EDUCATION

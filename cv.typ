@@ -221,7 +221,7 @@
   text(weight: "bold", size: 8.5pt, "AI & Tooling"),
   text(
     size: 8.5pt,
-    "Agentic AI infrastructure, Claude Code, LLM token optimization (RTK), Vector stores, BM25, Embeddings",
+    "Agentic AI infrastructure, Autonomous Agents, Claude Code, SDD (CAVEKIT), LLM token optimization (RTK), Vector stores, BM25, Embeddings",
   ),
 
   text(weight: "bold", size: 8.5pt, "Leadership"),
