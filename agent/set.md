@@ -57,3 +57,4 @@
 @./set/skills/gnu/sed.md
 @./set/skills/gnu/find.md
 @./set/skills/gnu/coreutils.md
+@./set/skills/portability.md
