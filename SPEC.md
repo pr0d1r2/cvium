@@ -85,7 +85,7 @@ Typst CV compiles to PDF + plain text. Auto-rebuilds on commit. Nix flake produc
 |----|--------|------|-------|
 | T1 | . | add justfile with build/watch/format/lint/test/text recipes calling scripts/ | I.cli,C7 |
 | T2 | . | create scripts/build.sh, scripts/watch.sh, scripts/format.sh, scripts/lint.sh, scripts/text.sh | C7,V8 |
-| T3 | . | add nix-lefthook input to flake.nix, add lefthook+just+bats+shellcheck+shfmt+poppler_utils+gnugrep+gnused+findutils+coreutils to dev shell | C6,V9 |
+| T3 | x | add nix-lefthook input to flake.nix, add lefthook+just+bats+shellcheck+shfmt+poppler_utils+gnugrep+gnused+findutils+coreutils to dev shell | C6,V9 |
 | T4 | . | add lefthook.yml with remotes for both pre-commit and pre-push (see T4 detail) | I.hook.remote,C6,C8 |
 | T5 | . | add local pre-commit hook: typst compile + git add cv.pdf + generate cv.txt + git add cv.txt (with timeout) | I.hook.pdf,V5,V13 |
 | T6 | . | add local pre-commit hook: typstyle check (with timeout) | V3 |
