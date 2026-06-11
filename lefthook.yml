@@ -2,6 +2,9 @@
 output:
   - failure
 
+# Lean gate (strategy B): only remotes whose wrappers ship in the
+# nix-lefthook bundle ci devShell. Deferred remotes (no wrapper yet)
+# tracked in SPEC §B B1 / §T T52,T53,T54 — restore per-task.
 remotes:
   - git_url: https://github.com/pr0d1r2/nix-lefthook-nixfmt
     ref: main
@@ -19,31 +22,11 @@ remotes:
     ref: main
     configs:
       - lefthook-remote.yml
-  - git_url: https://github.com/pr0d1r2/nix-lefthook-nix-flake-check
-    ref: main
-    configs:
-      - lefthook-remote.yml
-  - git_url: https://github.com/pr0d1r2/nix-lefthook-nix-flake-eval
-    ref: main
-    configs:
-      - lefthook-remote.yml
   - git_url: https://github.com/pr0d1r2/nix-lefthook-shellcheck
     ref: main
     configs:
       - lefthook-remote.yml
   - git_url: https://github.com/pr0d1r2/nix-lefthook-shfmt
-    ref: main
-    configs:
-      - lefthook-remote.yml
-  - git_url: https://github.com/pr0d1r2/nix-lefthook-no-shell-functions
-    ref: main
-    configs:
-      - lefthook-remote.yml
-  - git_url: https://github.com/pr0d1r2/nix-lefthook-justfile-no-embedded-shell
-    ref: main
-    configs:
-      - lefthook-remote.yml
-  - git_url: https://github.com/pr0d1r2/nix-lefthook-justfile-alphabetical
     ref: main
     configs:
       - lefthook-remote.yml
@@ -55,7 +38,7 @@ remotes:
     ref: main
     configs:
       - lefthook-remote.yml
-  - git_url: https://github.com/pr0d1r2/nix-lefthook-markdownlint
+  - git_url: https://github.com/pr0d1r2/nix-lefthook-markdownlint-agentic
     ref: main
     configs:
       - lefthook-remote.yml
@@ -71,14 +54,6 @@ remotes:
     ref: main
     configs:
       - lefthook-remote.yml
-  - git_url: https://github.com/pr0d1r2/nix-lefthook-unicode-lint
-    ref: main
-    configs:
-      - lefthook-remote.yml
-  - git_url: https://github.com/pr0d1r2/nix-lefthook-narrow-language
-    ref: main
-    configs:
-      - lefthook-remote.yml
   - git_url: https://github.com/pr0d1r2/nix-lefthook-git-conflict-markers
     ref: main
     configs:
@@ -91,54 +66,17 @@ remotes:
     ref: main
     configs:
       - lefthook-remote.yml
-  - git_url: https://github.com/pr0d1r2/nix-lefthook-commit-msg-lint
-    ref: main
-    configs:
-      - lefthook-remote.yml
-  - git_url: https://github.com/pr0d1r2/nix-lefthook-pre-rebase-merged-commits
-    ref: main
-    configs:
-      - lefthook-remote.yml
   - git_url: https://github.com/pr0d1r2/nix-lefthook-editorconfig-checker
     ref: main
     configs:
       - lefthook-remote.yml
-  - git_url: https://github.com/pr0d1r2/nix-lefthook-file-size-check
-    ref: main
-    configs:
-      - lefthook-remote.yml
-  - git_url: https://github.com/pr0d1r2/nix-lefthook-linter-coverage-full
-    ref: main
-    configs:
-      - lefthook-remote.yml
-  - git_url: https://github.com/pr0d1r2/nix-lefthook-changelog-touched
-    ref: main
-    configs:
-      - lefthook-remote.yml
-  - git_url: https://github.com/pr0d1r2/nix-lefthook-bats-parse
-    ref: main
-    configs:
-      - lefthook-remote.yml
-  - git_url: https://github.com/pr0d1r2/nix-lefthook-bats-unit
-    ref: main
-    configs:
-      - lefthook-remote.yml
-  - git_url: https://github.com/pr0d1r2/nix-lefthook-bats-failures-only
-    ref: main
-    configs:
-      - lefthook-remote.yml
-  - git_url: https://github.com/pr0d1r2/nix-lefthook-tdd-order-bats
-    ref: main
-    configs:
-      - lefthook-remote.yml
-  - git_url: https://github.com/pr0d1r2/nix-lefthook-unit-coverage
-    ref: main
-    configs:
-      - lefthook-remote.yml
-  - git_url: https://github.com/pr0d1r2/nix-lefthook-actionlint
-    ref: main
-    configs:
-      - lefthook-remote.yml
+
+# Generated/binary artifacts text linters must not scan.
+_exclude_artifacts: &exclude_artifacts
+  - "cv.pdf"
+  - "avatar.png"
+  - "cv.txt"
+  - "flake.lock"
 
 pre-commit:
   parallel: true
@@ -148,7 +86,15 @@ pre-commit:
       run: timeout ${LEFTHOOK_REBUILD_TIMEOUT:-30} bash scripts/hooks/rebuild.sh
     typstyle:
       glob: "*.typ"
-      run: timeout ${LEFTHOOK_TYPSTYLE_TIMEOUT:-10} typstyle check {staged_files}
+      run: timeout ${LEFTHOOK_TYPSTYLE_TIMEOUT:-10} typstyle --check {staged_files}
+    trailing-whitespace:
+      exclude: *exclude_artifacts
+    missing-final-newline:
+      exclude: *exclude_artifacts
+    typos:
+      exclude: *exclude_artifacts
+    editorconfig-checker:
+      exclude: *exclude_artifacts
 
 pre-push:
   parallel: true
@@ -158,4 +104,12 @@ pre-push:
       run: timeout ${LEFTHOOK_REBUILD_TIMEOUT:-30} bash scripts/hooks/rebuild.sh
     typstyle:
       glob: "*.typ"
-      run: timeout ${LEFTHOOK_TYPSTYLE_TIMEOUT:-10} typstyle check {push_files}
+      run: timeout ${LEFTHOOK_TYPSTYLE_TIMEOUT:-10} typstyle --check {push_files}
+    trailing-whitespace:
+      exclude: *exclude_artifacts
+    missing-final-newline:
+      exclude: *exclude_artifacts
+    typos:
+      exclude: *exclude_artifacts
+    editorconfig-checker:
+      exclude: *exclude_artifacts
