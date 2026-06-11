@@ -5,3 +5,4 @@
 @./set/skills/tdd.md
 @./set/skills/linter.md
 @./set/skills/just.md
+@./set/skills/justfile.md
