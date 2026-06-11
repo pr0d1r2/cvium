@@ -7,3 +7,4 @@
 @./set/skills/just.md
 @./set/skills/justfile.md
 @./set/skills/just/modularity.md
+@./set/skills/lefthook.md

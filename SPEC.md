@@ -56,7 +56,7 @@ Typst CV compiles to PDF + plain text, auto-rebuilds on commit via lefthook, man
 - V6: (skill: just/modularity) no embedded shell in justfile recipes
 - V7: lefthook.yml present and valid YAML
 - V8: all justfile scripts exist in scripts/ and are executable
-- V9: lefthook install succeeds in dev shell
+- V9: (skill: lefthook) lefthook install succeeds in dev shell
 - V10: all pre-commit hooks pass on clean tree
 - V11: `nix build` succeeds and produces cv.pdf
 - V12: all links in PDF are clickable (email, GitHub, LinkedIn)
