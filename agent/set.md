@@ -49,3 +49,6 @@
 @./set/skills/opensource/personal-data.md
 @./set/skills/opensource/repo-scaffold.md
 @./set/skills/opensource/attribution.md
+@./set/skills/security/security.md
+@./set/skills/security/auth-hygiene.md
+@./set/skills/security/personal.md
