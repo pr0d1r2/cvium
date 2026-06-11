@@ -65,3 +65,4 @@
 @./set/skills/update/security.md
 @./set/skills/opensource/ci.md
 @./set/skills/product/plan.md
+@./set/skills/implementation.md
