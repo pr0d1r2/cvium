@@ -48,6 +48,9 @@
             pkgs.coreutils
           ];
           BATS_LIB_PATH = "${batsWithLibs}/share/bats";
+          shellHook = ''
+            lefthook install
+          '';
         };
       }
     );

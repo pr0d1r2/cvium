@@ -93,7 +93,7 @@ Typst CV compiles to PDF + plain text. Auto-rebuilds on commit. Nix flake produc
 | T8 | . | add bats test: PDF page count = 2 | V2 |
 | T9 | . | add bats test: typst compile succeeds | V1 |
 | T10 | . | add bats test: cv.pdf not stale vs cv.typ | V5 |
-| T11 | . | (skill: lefthook) add shellHook to flake.nix: lefthook install | V9 |
+| T11 | x | (skill: lefthook) add shellHook to flake.nix: lefthook install | V9 |
 | T12 | . | add CHANGELOG.md | I.file.changelog,V18,C13 |
 | T13 | . | make all links in cv.typ clickable hyperlinks (email, GitHub, LinkedIn) | V12,C11 |
 | T14 | . | add git rev to PDF metadata via --input rev=SHORT_SHA | V15 |
