@@ -63,3 +63,4 @@
 @./set/skills/update/update.md
 @./set/skills/update/modularity.md
 @./set/skills/update/security.md
+@./set/skills/opensource/ci.md
