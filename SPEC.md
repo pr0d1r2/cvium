@@ -174,7 +174,7 @@ Typst CV compiles to PDF + plain text. Auto-rebuilds on commit. Nix flake produc
 | T52 | . | (skill: lefthook/wrapper-flake-inputs) fix flake.nix — inputsFrom nix-lefthook.devShells.ci instead of packages.default (recovers 16 wrappers) | V45,B1 |
 | T53 | . | upstream pr0d1r2/nix-lefthook — expose wrappers as individual packages.lefthook-* (NOT fatten ci — bloats all consumers); keep ci lean; cvium then composes exact 34. Repos for all ~18 missing exist | V45,B1 |
 | T54 | x | (strategy B) lean-trim lefthook.yml to 16 bundle-backed remotes (swap markdownlint→markdownlint-agentic); defer 18 to T52/T53; restore per-task as wrappers land | V45,B1 |
-| T55 | x | replace bundle shfmt remote (hardcoded -i 4 -ci, ignores .editorconfig) with local flagless shfmt honoring .editorconfig (2-space default); upstream fix PR pr0d1r2/nix-lefthook-shfmt#13 — restore remote after merge | V45 |
+| T55 | x | shfmt now honors .editorconfig (2-space). Wrapper fix nix-lefthook-shfmt#13 merged, bundle re-pin nix-lefthook#10 merged; cvium flake.lock bumped, local override removed, shfmt remote restored | V45 |
 | T56 | x | add `just photo <url>` — fetch github avatar, scale + pngquant-optimize, rebuild, commit on success; curl+imagemagick+pngquant in devShell; tests/photo.bats | I.cli,streamline |
 
 ### T4 detail — lefthook remotes
