@@ -42,8 +42,7 @@
   grid(
     columns: (1em, 1fr),
     column-gutter: 0.2em,
-    text(fill: accent, "•"),
-    body,
+    text(fill: accent, "•"), body,
   )
 }
 
@@ -56,7 +55,11 @@
   {
     text(size: 22pt, weight: "bold", "Marcin Nowicki")
     v(-0.1em)
-    text(size: 11pt, fill: muted, "Staff Software Engineer — CI/CD & Developer Tooling")
+    text(
+      size: 11pt,
+      fill: muted,
+      "Staff Software Engineer — CI/CD & Developer Tooling",
+    )
     v(0.4em)
     text(size: 8.5pt, fill: muted)[
       marcin\@prodix.pl #h(0.8em)  #h(0.8em)
@@ -180,28 +183,52 @@
   row-gutter: 0.3em,
 
   text(weight: "bold", size: 8.5pt, "Languages"),
-  text(size: 8.5pt, "Ruby, Shell (bash/zsh), JavaScript/TypeScript, Nix, Python, PHP"),
+  text(
+    size: 8.5pt,
+    "Ruby, Shell (bash/zsh), JavaScript/TypeScript, Nix, Python, PHP",
+  ),
 
   text(weight: "bold", size: 8.5pt, "Frameworks"),
-  text(size: 8.5pt, "Ruby on Rails, RSpec, GraphQL, React.js, Stimulus, Backbone.js"),
+  text(
+    size: 8.5pt,
+    "Ruby on Rails, RSpec, GraphQL, React.js, Stimulus, Backbone.js",
+  ),
 
   text(weight: "bold", size: 8.5pt, "CI/CD & Testing"),
-  text(size: 8.5pt, "Jenkins, GitHub Actions, HarnessCI, RSpec, Minitest, Capybara, Cucumber, Selenium, RuboCop (custom cops)"),
+  text(
+    size: 8.5pt,
+    "Jenkins, GitHub Actions, HarnessCI, RSpec, Minitest, Capybara, Cucumber, Selenium, RuboCop (custom cops)",
+  ),
 
   text(weight: "bold", size: 8.5pt, "Infrastructure"),
-  text(size: 8.5pt, "Docker, NixOS, GCP, Terraform, Chef, Ansible, Gentoo/Debian/Alpine Linux"),
+  text(
+    size: 8.5pt,
+    "Docker, NixOS, GCP, Terraform, Chef, Ansible, Gentoo/Debian/Alpine Linux",
+  ),
 
   text(weight: "bold", size: 8.5pt, "Data & Search"),
-  text(size: 8.5pt, "PostgreSQL, MySQL, MongoDB, ElasticSearch (Chewy), Redis, Memcached"),
+  text(
+    size: 8.5pt,
+    "PostgreSQL, MySQL, MongoDB, ElasticSearch (Chewy), Redis, Memcached",
+  ),
 
   text(weight: "bold", size: 8.5pt, "Architecture"),
-  text(size: 8.5pt, "Microservices, SOA, REST, GraphQL (Apollo Federation), Monolith decomposition"),
+  text(
+    size: 8.5pt,
+    "Microservices, SOA, REST, GraphQL (Apollo Federation), Monolith decomposition",
+  ),
 
   text(weight: "bold", size: 8.5pt, "AI & Tooling"),
-  text(size: 8.5pt, "Agentic AI infrastructure, Claude Code, LLM token optimization (RTK), Vector stores, BM25, Embeddings"),
+  text(
+    size: 8.5pt,
+    "Agentic AI infrastructure, Claude Code, LLM token optimization (RTK), Vector stores, BM25, Embeddings",
+  ),
 
   text(weight: "bold", size: 8.5pt, "Leadership"),
-  text(size: 8.5pt, "Scaled Scrum, Kanban, LEAN, OKRs/KPIs, Team building (4→16), Technical mentoring"),
+  text(
+    size: 8.5pt,
+    "Scaled Scrum, Kanban, LEAN, OKRs/KPIs, Team building (4→16), Technical mentoring",
+  ),
 )
 
 // ── EDUCATION ───────────────────────────────────────────────────────────────
@@ -210,7 +237,9 @@
 
 #grid(
   columns: (1fr, auto),
-  text(size: 9pt)[*Electronic Technician, Computer Systems* — Techniczne Zakłady Naukowe, Częstochowa],
+  text(
+    size: 9pt,
+  )[*Electronic Technician, Computer Systems* — Techniczne Zakłady Naukowe, Częstochowa],
   text(fill: muted, size: 8.5pt, "1997 – 2002"),
 )
 
@@ -224,10 +253,13 @@
   row-gutter: 0.25em,
   bullet[30+ years in technology, exclusively remote],
   bullet[Built CI systems for entire engineering organizations],
+
   bullet[Coordinated with 200+ engineers at Toptal],
   bullet[Scaled teams from scratch (4→16 engineers)],
+
   bullet[Trained 3+ successor technical leads],
   bullet[Six-figure annual savings from spec optimization],
+
   bullet[260+ OSS repos; 30+ composable Nix CI packages],
   bullet[Building agentic AI developer tooling ecosystem],
 )
