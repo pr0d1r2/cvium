@@ -89,7 +89,7 @@ Typst CV compiles to PDF + plain text. Auto-rebuilds on commit. Nix flake produc
 | T4 | . | add lefthook.yml with remotes for both pre-commit and pre-push (see T4 detail) | I.hook.remote,C6,C8 |
 | T5 | . | add local pre-commit hook: typst compile + git add cv.pdf + generate cv.txt + git add cv.txt (with timeout) | I.hook.pdf,V5,V13 |
 | T6 | . | add local pre-commit hook: typstyle check (with timeout) | V3 |
-| T7 | . | (skill: opensource/repo-scaffold) add .editorconfig, .yamllint.yml, .markdownlint.yml (sync-setting candidates) | I.hook.remote |
+| T7 | x | (skill: opensource/repo-scaffold) add .editorconfig, .yamllint.yml, .markdownlint.yml (sync-setting candidates) | I.hook.remote |
 | T8 | . | add bats test: PDF page count = 2 | V2 |
 | T9 | . | add bats test: typst compile succeeds | V1 |
 | T10 | . | add bats test: cv.pdf not stale vs cv.typ | V5 |

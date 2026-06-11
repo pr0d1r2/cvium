@@ -1,0 +1,27 @@
+root = true
+
+[*]
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+charset = utf-8
+
+[*.{sh,bats}]
+indent_style = space
+indent_size = 4
+
+[*.nix]
+indent_style = space
+indent_size = 2
+
+[*.{md,yml,yaml,json,jsonc,toml}]
+indent_style = space
+indent_size = 2
+
+[*.typ]
+indent_style = space
+indent_size = 2
+
+[justfile]
+indent_style = space
+indent_size = 4
