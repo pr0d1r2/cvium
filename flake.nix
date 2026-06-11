@@ -28,6 +28,7 @@
         pkgs = nixpkgs.legacyPackages.${system};
         ci = nix-lefthook.devShells.${system}.ci;
         tools = [
+          pkgs.typst
           pkgs.typstyle
           pkgs.tinymist
           pkgs.git
