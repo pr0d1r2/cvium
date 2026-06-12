@@ -8,6 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
 ### Added
 
+- cv.local.example.typ placeholder and cv.local.typ gitignored for phone overlay (C17, V33, V34, T35)
 - Optional phone sys-input in cv.typ — absent omits line, present renders tel link (C17, V29, T34)
 - Narrow-language dictionaries for CV domain terms (V22, T27)
 - 1-to-1 bats tests for watch, format, lint, text scripts (V19, C14)
