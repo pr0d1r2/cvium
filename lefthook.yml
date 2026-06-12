@@ -166,6 +166,11 @@ pre-commit:
       exclude: *exclude_artifacts
     editorconfig-checker:
       exclude: *exclude_artifacts
+    changelog-touched:
+      skip:
+        - run: test -n "${CI:-}"
+    narrow-language-other-compact:
+      skip: true
     nix-flake-eval:
       skip: true
 
