@@ -8,6 +8,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
 ### Added
 
+- 1-to-1 bats tests for watch, format, lint, text scripts (V19, C14)
+
 - Nix text package: `nix build .#text` produces cv.txt derivation (I.nix.text)
 - Nix package output: `nix build` produces cv.pdf derivation (C9, V11)
 - QR code on CV linking to latest release (C12, V14), qrencode in devShell
