@@ -57,7 +57,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
 - Pass CI=true via extra-env in CI workflow so changelog-touched
   skip works with --ignore-environment
-- Add missing dictionary words and remove leaked instruction line
+- Add missing dictionary words (sum, instruction) and restore
+  removed Unicode word (résumé)
 - Consume nix-lefthook ci devShell via inputsFrom so hook wrappers
   resolve — local CI gate was non-functional (56 exit-127)
 - Lean-trim lefthook.yml to the 16 bundle-backed remotes; defer the
