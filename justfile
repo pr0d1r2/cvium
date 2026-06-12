@@ -24,7 +24,7 @@ photo url:
 
 # run bats tests
 test:
-    bats tests/
+    bash scripts/test.sh
 
 # generate plain text export cv.txt
 text:
