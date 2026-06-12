@@ -8,6 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
 ### Added
 
+- Narrow-language dictionaries for CV domain terms (V22, T27)
 - 1-to-1 bats tests for watch, format, lint, text scripts (V19, C14)
 
 - Nix text package: `nix build .#text` produces cv.txt derivation (I.nix.text)

@@ -147,7 +147,7 @@ Typst CV compiles to PDF + plain text. Auto-rebuilds on commit. Nix flake produc
 | T24 | x | add bats test: links in PDF are hyperlinks | V12 |
 | T25 | x | add bats test: QR code present in PDF | V14 |
 | T26 | x | add tests/build.bats, tests/watch.bats, tests/format.bats, tests/lint.bats, tests/text.bats (1-to-1) | V19,C14 |
-| T27 | . | add narrow-language dictionary for CV domain terms | V22 |
+| T27 | x | add narrow-language dictionary for CV domain terms | V22 |
 | T28 | x | (skill: direnv) add .envrc with `use flake` and watch | C5 |
 | T29 | x | (skill: opensource/licensing) add MIT LICENSE | C15 |
 | T30 | x | (skill: opensource/repo-scaffold) add .gitattributes marking cv.pdf as binary/generated | V28 |
