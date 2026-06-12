@@ -26,6 +26,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
 ### Added
 
+- Bats test + script verifying QR code hyperlink present in PDF (V14)
 - Git short rev embedded in PDF metadata via --input rev=SHORT_SHA (V15)
 - Clickable hyperlinks in CV for email, GitHub, and LinkedIn (V12)
 - Bats test + script verifying PDF contains hyperlink annotations (V12)
