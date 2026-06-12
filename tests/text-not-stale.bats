@@ -10,9 +10,19 @@ setup() {
   STUB="$BATS_TEST_TMPDIR/bin"
   mkdir -p "$STUB"
 
+  cat >"$STUB/git" <<'STUB'
+#!/usr/bin/env bash
+if [ "$1" = "rev-parse" ] && [ "$2" = "--short" ] && [ "$3" = "HEAD" ]; then
+  echo "abc1234"
+  exit 0
+fi
+exit 1
+STUB
+  chmod +x "$STUB/git"
+
   cat >"$STUB/typst" <<'STUB'
 #!/usr/bin/env bash
-printf "fresh-pdf" >"$3"
+printf "fresh-pdf" >"$5"
 STUB
   chmod +x "$STUB/typst"
 
@@ -46,4 +56,22 @@ STUB
   rm "$BATS_TEST_TMPDIR/work/cv.txt"
   run bash "$SCRIPT"
   assert_failure
+}
+
+@test "passes --input rev=SHORT_SHA to typst" {
+  cat >"$STUB/typst" <<'STUB'
+#!/usr/bin/env bash
+for arg in "$@"; do
+  if [ "$arg" = "rev=abc1234" ]; then
+    printf "fresh-pdf" >"$5"
+    exit 0
+  fi
+done
+echo "missing --input rev=abc1234" >&2
+exit 1
+STUB
+  chmod +x "$STUB/typst"
+
+  run bash "$SCRIPT"
+  assert_success
 }
