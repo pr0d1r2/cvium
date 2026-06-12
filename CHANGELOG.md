@@ -15,6 +15,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 - Git short rev embedded in PDF metadata via --input rev=SHORT_SHA (V15)
 - Clickable hyperlinks in CV for email, GitHub, and LinkedIn (V12)
 - Bats test + script verifying PDF contains hyperlink annotations (V12)
+- Bats test + script verifying nix build succeeds and produces result (V11)
 - Bats test + script verifying cv.txt not stale vs cv.typ (V13 invariant)
 - Bats test + script verifying cv.pdf not stale vs cv.typ (V5 invariant)
 - Bats test verifying typst compile succeeds with zero warnings (V1 invariant)
