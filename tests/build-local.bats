@@ -37,6 +37,14 @@ STUB
   assert_output --partial "cv.local.typ not found"
 }
 
+@test "fails when cv.local.typ has no phone line" {
+  echo "// no phone here" >"$BATS_TEST_TMPDIR/cv.local.typ"
+
+  run bash "$SCRIPT"
+  assert_failure
+  assert_output --partial "no phone found"
+}
+
 @test "succeeds when cv.local.typ has phone and typst exits zero" {
   echo '#let phone = "+48 123 456 789"' >"$BATS_TEST_TMPDIR/cv.local.typ"
 
