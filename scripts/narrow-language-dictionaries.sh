@@ -8,7 +8,6 @@ dics=(
   ".narrow-language-other.dic"
   ".narrow-language-shell.dic"
 )
-exit_code=0
 
 for dic in "${dics[@]}"; do
   path="$root/$dic"
@@ -29,5 +28,3 @@ for dic in "${dics[@]}"; do
     exit 1
   fi
 done
-
-exit "$exit_code"
