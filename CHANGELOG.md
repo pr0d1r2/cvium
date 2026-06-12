@@ -8,6 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
 ### Added
 
+- Gitignore verification script + test for cv.local.typ and cv.local.pdf (V33, T37)
 - `just build-local` — compile full PDF with phone from cv.local.typ overlay, never committed (C17, T36)
 - cv.local.example.typ placeholder and cv.local.typ gitignored for phone overlay (C17, V33, V34, T35)
 - Optional phone sys-input in cv.typ — absent omits line, present renders tel link (C17, V29, T34)
