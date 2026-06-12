@@ -26,6 +26,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
 ### Added
 
+- Clickable hyperlinks in CV for email, GitHub, and LinkedIn (V12)
+- Bats test + script verifying PDF contains hyperlink annotations (V12)
 - Bats test + script verifying cv.pdf not stale vs cv.typ (V5 invariant)
 - Bats test verifying typst compile succeeds with zero warnings (V1 invariant)
 - Bats test + script verifying PDF page count = 2 (V2 invariant)

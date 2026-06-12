@@ -133,7 +133,7 @@ Typst CV compiles to PDF + plain text. Auto-rebuilds on commit. Nix flake produc
 | T10 | x | add bats test: cv.pdf not stale vs cv.typ | V5 |
 | T11 | x | (skill: lefthook) add shellHook to flake.nix: lefthook install | V9 |
 | T12 | x | add CHANGELOG.md | I.file.changelog,V18,C13 |
-| T13 | . | make all links in cv.typ clickable hyperlinks (email, GitHub, LinkedIn) | V12,C11 |
+| T13 | x | make all links in cv.typ clickable hyperlinks (email, GitHub, LinkedIn) | V12,C11 |
 | T14 | . | add git rev to PDF metadata via --input rev=SHORT_SHA | V15 |
 | T15 | . | add QR code to CV linking to github.com/pr0d1r2/cvium/releases/latest | V14,C12 |
 | T16 | . | add nix package output: packages.default builds cv.pdf derivation | I.nix.build,V11,C9 |
@@ -144,7 +144,7 @@ Typst CV compiles to PDF + plain text. Auto-rebuilds on commit. Nix flake produc
 | T21 | x | add README.md with PDF preview screenshot of page 1 | I.file.readme,V17 |
 | T22 | . | add bats test: cv.txt not stale vs cv.typ | V13 |
 | T23 | . | add bats test: nix build succeeds | V11 |
-| T24 | . | add bats test: links in PDF are hyperlinks | V12 |
+| T24 | x | add bats test: links in PDF are hyperlinks | V12 |
 | T25 | . | add bats test: QR code present in PDF | V14 |
 | T26 | . | add tests/build.bats, tests/watch.bats, tests/format.bats, tests/lint.bats, tests/text.bats (1-to-1) | V19,C14 |
 | T27 | . | add narrow-language dictionary for CV domain terms | V22 |

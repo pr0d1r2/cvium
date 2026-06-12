@@ -62,10 +62,10 @@
     )
     v(0.4em)
     text(size: 8.5pt, fill: muted)[
-      marcin\@prodix.pl #h(0.8em)
+      #link("mailto:marcin@prodix.pl")[marcin\@prodix.pl] #h(0.8em)
       Częstochowa, Poland #h(0.8em)
-      github.com/pr0d1r2 #h(0.8em)
-      linkedin.com/in/pr0d1r2
+      #link("https://github.com/pr0d1r2")[github.com/pr0d1r2] #h(0.8em)
+      #link("https://linkedin.com/in/pr0d1r2")[linkedin.com/in/pr0d1r2]
     ]
     v(0.35em)
     text(size: 9.2pt)[
@@ -177,7 +177,7 @@
 #section("Open Source")
 
 #bullet[In 2026, built a composing platform of \~80 repositories in four months — a 62-package Nix CI product, an agentic-AI dev toolchain (token optimization, semantic search, embeddings, spec-driven agents), and bootable NixOS appliances — on one reproducible, test-driven spine. 320 repos total.]
-#bullet[Bootstrapped largely by a self-built autonomous agent fleet: NixOS agent nodes that open PRs, run specs, and maintain repositories independently, with declarative configuration and cross-agent persistent memory. github.com/pr0d1r2]
+#bullet[Bootstrapped largely by a self-built autonomous agent fleet: NixOS agent nodes that open PRs, run specs, and maintain repositories independently, with declarative configuration and cross-agent persistent memory. #link("https://github.com/pr0d1r2")[github.com/pr0d1r2]]
 
 #section("Technical Skills")
 
