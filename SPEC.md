@@ -170,7 +170,7 @@ Typst CV compiles to PDF + plain text. Auto-rebuilds on commit. Nix flake produc
 | T47 | x | (skill: opensource/ci) add devShells.ci (no shellHook) | C23,V37 |
 | T48 | x | (skill: opensource/repo-scaffold) add cachix nixConfig + public key to flake | C24 |
 | T49 | x | (nix-lefthook-gitleaks) add .gitleaks.toml allowlist | V43 |
-| T50 | . | (skill: opensource/repo-scaffold) add cachix-check.sh | V44 |
+| T50 | x | (skill: opensource/repo-scaffold) add cachix-check.sh | V44 |
 | T51 | x | (skill: opensource/licensing) add content-license note — tooling MIT, cv.typ content reserved | C19 |
 | T52 | x | (skill: lefthook/wrapper-flake-inputs) fix flake.nix — inputsFrom nix-lefthook.devShells.ci instead of packages.default (recovers 16 wrappers) | V45,B1 |
 | T53 | . | upstream pr0d1r2/nix-lefthook — expose wrappers as individual packages.lefthook-* (NOT fatten ci — bloats all consumers); keep ci lean; cvium then composes exact 34. Repos for all ~18 missing exist | V45,B1 |
