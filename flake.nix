@@ -49,15 +49,30 @@
         ];
       in
       {
-        packages.default = pkgs.callPackage ./package.nix {
-          inherit rev;
-          src = pkgs.lib.fileset.toSource {
-            root = ./.;
-            fileset = pkgs.lib.fileset.unions [
-              ./cv.typ
-              ./avatar.png
-              ./qr.png
-            ];
+        packages = {
+          default = pkgs.callPackage ./package.nix {
+            inherit rev;
+            src = pkgs.lib.fileset.toSource {
+              root = ./.;
+              fileset = pkgs.lib.fileset.unions [
+                ./cv.typ
+                ./avatar.png
+                ./qr.png
+              ];
+            };
+          };
+
+          text = pkgs.callPackage ./text.nix {
+            inherit rev;
+            poppler_utils = pkgs.poppler-utils;
+            src = pkgs.lib.fileset.toSource {
+              root = ./.;
+              fileset = pkgs.lib.fileset.unions [
+                ./cv.typ
+                ./avatar.png
+                ./qr.png
+              ];
+            };
           };
         };
 
