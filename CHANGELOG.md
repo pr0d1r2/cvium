@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
 
+### Added
+
+- Nix package output: `nix build` produces cv.pdf derivation (C9, V11)
+
 ### Changed
 
 - 2-space indent is the editorconfig default everywhere unless overridden

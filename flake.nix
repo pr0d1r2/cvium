@@ -17,6 +17,7 @@
 
   outputs =
     {
+      self,
       nixpkgs,
       flake-utils,
       nix-lefthook,
@@ -27,6 +28,7 @@
       let
         pkgs = nixpkgs.legacyPackages.${system};
         ci = nix-lefthook.devShells.${system}.ci;
+        rev = self.shortRev or self.dirtyShortRev or "dev";
         tools = [
           pkgs.typst
           pkgs.typstyle
@@ -47,6 +49,18 @@
         ];
       in
       {
+        packages.default = pkgs.callPackage ./package.nix {
+          inherit rev;
+          src = pkgs.lib.fileset.toSource {
+            root = ./.;
+            fileset = pkgs.lib.fileset.unions [
+              ./cv.typ
+              ./avatar.png
+              ./qr.png
+            ];
+          };
+        };
+
         devShells = {
           ci = pkgs.mkShell {
             inputsFrom = [ ci ];

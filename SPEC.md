@@ -136,7 +136,7 @@ Typst CV compiles to PDF + plain text. Auto-rebuilds on commit. Nix flake produc
 | T13 | x | make all links in cv.typ clickable hyperlinks (email, GitHub, LinkedIn) | V12,C11 |
 | T14 | x | add git rev to PDF metadata via --input rev=SHORT_SHA | V15 |
 | T15 | x | add QR code to CV linking to github.com/pr0d1r2/cvium/releases/latest | V14,C12 |
-| T16 | . | add nix package output: packages.default builds cv.pdf derivation | I.nix.build,V11,C9 |
+| T16 | x | add nix package output: packages.default builds cv.pdf derivation | I.nix.build,V11,C9 |
 | T17 | . | add nix package output: packages.text builds cv.txt derivation | I.nix.text |
 | T18 | x | add plain text export script (PDF → txt via pdftotext or typst query) | I.cli.text,V13 |
 | T19 | x | (skill: ci/ci, ci/full-commit-sha) add .github/workflows/build.yml — build on push, verify PDF matches, pin actions to full SHA | I.ci.build,V16,C10 |
