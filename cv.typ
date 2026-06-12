@@ -2,6 +2,7 @@
 // 2-page Staff/L5 CV targeting CI infrastructure & technical leadership roles
 
 #let rev = sys.inputs.at("rev", default: "dev")
+#let phone = sys.inputs.at("phone", default: none)
 
 #set document(
   title: "Marcin Nowicki — Staff Software Engineer",
@@ -66,6 +67,7 @@
     v(0.4em)
     text(size: 8.5pt, fill: muted)[
       #link("mailto:marcin@prodix.pl")[marcin\@prodix.pl] #h(0.8em)
+      #if phone != none [#link("tel:" + phone)[#phone] #h(0.8em)]
       Częstochowa, Poland #h(0.8em)
       #link("https://github.com/pr0d1r2")[github.com/pr0d1r2] #h(0.8em)
       #link("https://linkedin.com/in/pr0d1r2")[linkedin.com/in/pr0d1r2]
