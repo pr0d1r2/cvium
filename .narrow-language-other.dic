@@ -6,7 +6,6 @@ across
 action
 actionlint
 actions
-add to .narrow-language-other.dic or replace with known synonyms
 administrator
 adopted
 adoption
@@ -196,6 +195,7 @@ engineer
 engineering
 engineers
 entire
+env
 envrc
 established
 eval
@@ -208,6 +208,7 @@ experteer
 export
 express
 ext
+extra
 extend
 extends
 external
