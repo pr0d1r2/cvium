@@ -142,7 +142,7 @@ Typst CV compiles to PDF + plain text. Auto-rebuilds on commit. Nix flake produc
 | T19 | x | (skill: ci/ci, ci/full-commit-sha) add .github/workflows/build.yml — build on push, verify PDF matches, pin actions to full SHA | I.ci.build,V16,C10 |
 | T20 | x | (skill: ci/cd) add .github/workflows/release.yml — on tag, create release with cv.pdf | I.ci.release,C10 |
 | T21 | x | add README.md with PDF preview screenshot of page 1 | I.file.readme,V17 |
-| T22 | . | add bats test: cv.txt not stale vs cv.typ | V13 |
+| T22 | x | add bats test: cv.txt not stale vs cv.typ | V13 |
 | T23 | . | add bats test: nix build succeeds | V11 |
 | T24 | x | add bats test: links in PDF are hyperlinks | V12 |
 | T25 | x | add bats test: QR code present in PDF | V14 |
