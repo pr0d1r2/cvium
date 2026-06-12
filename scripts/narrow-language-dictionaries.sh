@@ -24,7 +24,7 @@ for dic in "${dics[@]}"; do
     echo "unsorted: $dic" >&2
     exit 1
   fi
-  if [ "$(LC_ALL=C sort -u "$path" | wc -l)" -ne "$(wc -l < "$path")" ]; then
+  if [ "$(LC_ALL=C sort -u "$path" | wc -l)" -ne "$(wc -l <"$path")" ]; then
     echo "duplicates in: $dic" >&2
     exit 1
   fi
