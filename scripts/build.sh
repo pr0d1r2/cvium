@@ -1,4 +1,12 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-typst compile cv.typ cv.pdf
+output=$(typst compile cv.typ cv.pdf 2>&1) || {
+  echo "$output" >&2
+  exit 1
+}
+
+if [ -n "$output" ]; then
+  echo "$output" >&2
+  exit 1
+fi
