@@ -3,6 +3,11 @@ glob = "*.sh"
 dirs = ["scripts"]
 test_dir = "tests"
 pattern = "mirror"
-strip = "scripts"
 test_ext = "bats"
-exclude = ["scripts/hooks"]
+
+[[rules]]
+glob = "*.sh"
+dirs = ["nix"]
+test_dir = "tests"
+pattern = "mirror"
+test_ext = "bats"

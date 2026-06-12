@@ -100,11 +100,13 @@
           ci = pkgs.mkShell {
             inputsFrom = [ ci ];
             packages = tools ++ extraHooks;
+            LEFTHOOK_TDD_SRC_STRIP = "";
           };
 
           default = pkgs.mkShell {
             inputsFrom = [ ci ];
             packages = tools ++ extraHooks;
+            LEFTHOOK_TDD_SRC_STRIP = "";
             shellHook = builtins.readFile ./nix/dev/shell.sh;
           };
         };
