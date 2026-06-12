@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-output=$(typst compile cv.typ cv.pdf 2>&1) || {
+rev=$(git rev-parse --short HEAD)
+
+output=$(typst compile --input "rev=$rev" cv.typ cv.pdf 2>&1) || {
   echo "$output" >&2
   exit 1
 }

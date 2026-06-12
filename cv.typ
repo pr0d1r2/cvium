@@ -1,9 +1,12 @@
 // CV — Marcin Nowicki
 // 2-page Staff/L5 CV targeting CI infrastructure & technical leadership roles
 
+#let rev = sys.inputs.at("rev", default: "dev")
+
 #set document(
   title: "Marcin Nowicki — Staff Software Engineer",
   author: "Marcin Nowicki",
+  keywords: ("rev:" + rev,),
 )
 
 #set page(
