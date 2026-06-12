@@ -8,6 +8,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
 ### Added
 
+- Compose all 34 lefthook remotes via individual packages from
+  upstream nix-lefthook (T53, V45, B1)
+- config/lefthook/file_size_limits.yml for file-size-check hook (V20)
+- .unit-coverage.toml for unit-coverage hook (V19)
+
 - cachix-check.sh — verify binary cache per system (V44, T50)
 - Gitignore verification script + test for cv.local.typ and cv.local.pdf (V33, T37)
 - `just build-local` — compile full PDF with phone from cv.local.typ overlay, never committed (C17, T36)

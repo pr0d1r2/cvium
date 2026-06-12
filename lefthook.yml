@@ -2,15 +2,28 @@
 output:
   - failure
 
-# Lean gate (strategy B): only remotes whose wrappers ship in the
-# nix-lefthook bundle ci devShell. Deferred remotes (no wrapper yet)
-# tracked in SPEC §B B1 / §T T52,T53,T54 — restore per-task.
 remotes:
-  - git_url: https://github.com/pr0d1r2/nix-lefthook-nixfmt
+  - git_url: https://github.com/pr0d1r2/nix-lefthook-actionlint
     ref: main
     configs:
       - lefthook-remote.yml
-  - git_url: https://github.com/pr0d1r2/nix-lefthook-statix
+  - git_url: https://github.com/pr0d1r2/nix-lefthook-bats-failures-only
+    ref: main
+    configs:
+      - lefthook-remote.yml
+  - git_url: https://github.com/pr0d1r2/nix-lefthook-bats-parse
+    ref: main
+    configs:
+      - lefthook-remote.yml
+  - git_url: https://github.com/pr0d1r2/nix-lefthook-bats-unit
+    ref: main
+    configs:
+      - lefthook-remote.yml
+  - git_url: https://github.com/pr0d1r2/nix-lefthook-changelog-touched
+    ref: main
+    configs:
+      - lefthook-remote.yml
+  - git_url: https://github.com/pr0d1r2/nix-lefthook-commit-msg-lint
     ref: main
     configs:
       - lefthook-remote.yml
@@ -18,39 +31,11 @@ remotes:
     ref: main
     configs:
       - lefthook-remote.yml
-  - git_url: https://github.com/pr0d1r2/nix-lefthook-nix-no-embedded-shell
+  - git_url: https://github.com/pr0d1r2/nix-lefthook-editorconfig-checker
     ref: main
     configs:
       - lefthook-remote.yml
-  - git_url: https://github.com/pr0d1r2/nix-lefthook-shellcheck
-    ref: main
-    configs:
-      - lefthook-remote.yml
-  - git_url: https://github.com/pr0d1r2/nix-lefthook-shfmt
-    ref: main
-    configs:
-      - lefthook-remote.yml
-  - git_url: https://github.com/pr0d1r2/nix-lefthook-yamllint
-    ref: main
-    configs:
-      - lefthook-remote.yml
-  - git_url: https://github.com/pr0d1r2/nix-lefthook-taplo
-    ref: main
-    configs:
-      - lefthook-remote.yml
-  - git_url: https://github.com/pr0d1r2/nix-lefthook-markdownlint-agentic
-    ref: main
-    configs:
-      - lefthook-remote.yml
-  - git_url: https://github.com/pr0d1r2/nix-lefthook-typos
-    ref: main
-    configs:
-      - lefthook-remote.yml
-  - git_url: https://github.com/pr0d1r2/nix-lefthook-trailing-whitespace
-    ref: main
-    configs:
-      - lefthook-remote.yml
-  - git_url: https://github.com/pr0d1r2/nix-lefthook-missing-final-newline
+  - git_url: https://github.com/pr0d1r2/nix-lefthook-file-size-check
     ref: main
     configs:
       - lefthook-remote.yml
@@ -66,7 +51,91 @@ remotes:
     ref: main
     configs:
       - lefthook-remote.yml
-  - git_url: https://github.com/pr0d1r2/nix-lefthook-editorconfig-checker
+  - git_url: https://github.com/pr0d1r2/nix-lefthook-justfile-alphabetical
+    ref: main
+    configs:
+      - lefthook-remote.yml
+  - git_url: https://github.com/pr0d1r2/nix-lefthook-justfile-no-embedded-shell
+    ref: main
+    configs:
+      - lefthook-remote.yml
+  - git_url: https://github.com/pr0d1r2/nix-lefthook-linter-coverage-full
+    ref: main
+    configs:
+      - lefthook-remote.yml
+  - git_url: https://github.com/pr0d1r2/nix-lefthook-markdownlint-agentic
+    ref: main
+    configs:
+      - lefthook-remote.yml
+  - git_url: https://github.com/pr0d1r2/nix-lefthook-missing-final-newline
+    ref: main
+    configs:
+      - lefthook-remote.yml
+  - git_url: https://github.com/pr0d1r2/nix-lefthook-narrow-language
+    ref: main
+    configs:
+      - lefthook-remote.yml
+  - git_url: https://github.com/pr0d1r2/nix-lefthook-nix-flake-check
+    ref: main
+    configs:
+      - lefthook-remote.yml
+  - git_url: https://github.com/pr0d1r2/nix-lefthook-nix-flake-eval
+    ref: main
+    configs:
+      - lefthook-remote.yml
+  - git_url: https://github.com/pr0d1r2/nix-lefthook-nix-no-embedded-shell
+    ref: main
+    configs:
+      - lefthook-remote.yml
+  - git_url: https://github.com/pr0d1r2/nix-lefthook-nixfmt
+    ref: main
+    configs:
+      - lefthook-remote.yml
+  - git_url: https://github.com/pr0d1r2/nix-lefthook-no-shell-functions
+    ref: main
+    configs:
+      - lefthook-remote.yml
+  - git_url: https://github.com/pr0d1r2/nix-lefthook-pre-rebase-merged-commits
+    ref: main
+    configs:
+      - lefthook-remote.yml
+  - git_url: https://github.com/pr0d1r2/nix-lefthook-shellcheck
+    ref: main
+    configs:
+      - lefthook-remote.yml
+  - git_url: https://github.com/pr0d1r2/nix-lefthook-shfmt
+    ref: main
+    configs:
+      - lefthook-remote.yml
+  - git_url: https://github.com/pr0d1r2/nix-lefthook-statix
+    ref: main
+    configs:
+      - lefthook-remote.yml
+  - git_url: https://github.com/pr0d1r2/nix-lefthook-taplo
+    ref: main
+    configs:
+      - lefthook-remote.yml
+  - git_url: https://github.com/pr0d1r2/nix-lefthook-tdd-order-bats
+    ref: main
+    configs:
+      - lefthook-remote.yml
+  - git_url: https://github.com/pr0d1r2/nix-lefthook-trailing-whitespace
+    ref: main
+    configs:
+      - lefthook-remote.yml
+  - git_url: https://github.com/pr0d1r2/nix-lefthook-typos
+    ref: main
+    configs:
+      - lefthook-remote.yml
+  - git_url: https://github.com/pr0d1r2/nix-lefthook-unicode-lint
+    ref: main
+    configs:
+      - lefthook-remote.yml
+  - git_url: https://github.com/pr0d1r2/nix-lefthook-unit-coverage
+    ref: main
+    configs:
+      - lefthook-remote.yml
+  - git_url: https://github.com/pr0d1r2/nix-lefthook-yamllint
     ref: main
     configs:
       - lefthook-remote.yml
@@ -97,6 +166,8 @@ pre-commit:
       exclude: *exclude_artifacts
     editorconfig-checker:
       exclude: *exclude_artifacts
+    nix-flake-eval:
+      skip: true
 
 pre-push:
   parallel: true
@@ -115,3 +186,5 @@ pre-push:
       exclude: *exclude_artifacts
     editorconfig-checker:
       exclude: *exclude_artifacts
+    linter-coverage-full:
+      skip: true
