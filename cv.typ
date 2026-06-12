@@ -52,7 +52,7 @@
 // ── HEADER ──────────────────────────────────────────────────────────────────
 
 #grid(
-  columns: (auto, 1fr),
+  columns: (auto, 1fr, auto),
   column-gutter: 1em,
   align(top, image("avatar.png", width: 2.5cm)),
   {
@@ -78,6 +78,12 @@
       I build the systems that build and maintain themselves.
     ]
   },
+  align(
+    top,
+    link("https://github.com/pr0d1r2/cvium/releases/latest")[
+      #image("qr.png", width: 1.8cm)
+    ],
+  ),
 )
 
 // ── EXPERIENCE ──────────────────────────────────────────────────────────────
