@@ -6,6 +6,10 @@ default:
 build:
     bash scripts/build.sh
 
+# compile full PDF with phone from cv.local.typ overlay
+build-local:
+    bash scripts/build-local.sh
+
 # format cv.typ with typstyle
 format:
     bash scripts/format.sh

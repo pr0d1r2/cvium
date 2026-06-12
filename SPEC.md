@@ -156,7 +156,7 @@ Typst CV compiles to PDF + plain text. Auto-rebuilds on commit. Nix flake produc
 | T33 | x | (skill: git, opensource/personal-data) git-filter-repo strip phone from history — replace-text on cv.typ/cv.txt/SPEC.md, path-remove cv.pdf from all history then regen clean (pdf phone is compressed, regex misses it); via nix-shell -p git-filter-repo; before first push | C18,V32 |
 | T34 | x | add optional phone sys-input to cv.typ (absent → omit line) so cv.local overlay can inject it; phone removal itself done by T33 | C17,V29 |
 | T35 | x | add cv.local.typ overlay (gitignored) + cv.local.example.typ placeholder | C17,V33,V34 |
-| T36 | . | add just build-local + scripts/build-local.sh — full PDF with phone, uncommitted | C17,I.cli.buildlocal |
+| T36 | x | add just build-local + scripts/build-local.sh — full PDF with phone, uncommitted | C17,I.cli.buildlocal |
 | T37 | . | gitignore cv.local.typ, cv.local.pdf | V33 |
 | T38 | x | regen cv.pdf/cv.txt phone-free, verify pdftotext extract has no phone digits | V30,V31 |
 | T39 | x | (skill: opensource/documentation) add README.md — personal scope, badge row, page-1 preview, content-license note | I.file.readme,V17,V38 |
