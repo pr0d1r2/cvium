@@ -9,27 +9,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 ### Added
 
 - Nix package output: `nix build` produces cv.pdf derivation (C9, V11)
-
-### Changed
-
-- 2-space indent is the editorconfig default everywhere unless overridden
-- shfmt runs flagless to honor `.editorconfig` (upstream wrapper fix:
-  pr0d1r2/nix-lefthook-shfmt#13)
-
-### Fixed
-
-- Consume nix-lefthook ci devShell via inputsFrom so hook wrappers
-  resolve — local CI gate was non-functional (56 exit-127)
-- Lean-trim lefthook.yml to the 16 bundle-backed remotes; defer the
-  rest until their wrappers ship (SPEC §B B1, §T T52/T53)
-- Correct typstyle check invocation (`--check`, not `check`)
-- Stop text linters scanning binary/generated artifacts
-  (cv.pdf, avatar.png, cv.txt, flake.lock)
-- Format cv.typ with typstyle
-- Blank lines around lists in skill docs (markdownlint MD032)
-
-### Added
-
 - QR code on CV linking to latest release (C12, V14), qrencode in devShell
 - Bats test + script verifying QR code hyperlink present in PDF (V14)
 - Git short rev embedded in PDF metadata via --input rev=SHORT_SHA (V15)
@@ -50,3 +29,21 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 - .gitignore for nix/claude/result artifacts
 - SPEC.md with 32 tasks, 28 invariants
 - 65 agent skills from set-and-setting
+
+### Changed
+
+- 2-space indent is the editorconfig default everywhere unless overridden
+- shfmt runs flagless to honor `.editorconfig` (upstream wrapper fix:
+  pr0d1r2/nix-lefthook-shfmt#13)
+
+### Fixed
+
+- Consume nix-lefthook ci devShell via inputsFrom so hook wrappers
+  resolve — local CI gate was non-functional (56 exit-127)
+- Lean-trim lefthook.yml to the 16 bundle-backed remotes; defer the
+  rest until their wrappers ship (SPEC §B B1, §T T52/T53)
+- Correct typstyle check invocation (`--check`, not `check`)
+- Stop text linters scanning binary/generated artifacts
+  (cv.pdf, avatar.png, cv.txt, flake.lock)
+- Format cv.typ with typstyle
+- Blank lines around lists in skill docs (markdownlint MD032)
