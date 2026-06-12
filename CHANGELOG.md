@@ -26,6 +26,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
 ### Added
 
+- Bats test verifying typst compile succeeds with zero warnings (V1 invariant)
 - Bats test + script verifying PDF page count = 2 (V2 invariant)
 - `just photo <url>` — fetch a profile avatar (e.g. github.com/user),
   scale + optimize it, rebuild the CV, and commit on success
