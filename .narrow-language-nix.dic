@@ -95,6 +95,7 @@ short
 size
 source
 stdenv
+strip
 substituters
 system
 text

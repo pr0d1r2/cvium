@@ -3,6 +3,7 @@ abc
 accepts
 actually
 add
+added
 adding
 after
 all
@@ -76,7 +77,9 @@ esac
 euo
 eval
 example
+executable
 exist
+exists
 exit
 exits
 expected
@@ -110,6 +113,7 @@ grep
 has
 head
 here
+hooks
 hub
 hyperlink
 hyperlinks
@@ -182,7 +186,6 @@ phone
 photo
 pipefail
 pngquant
-pr0d1r2
 present
 printf
 prodix
@@ -227,6 +230,7 @@ something
 sort
 sorted
 space
+stages
 stale
 stderr
 step
@@ -242,6 +246,7 @@ suffix
 support
 system
 test
+tests
 text
 the
 then
@@ -250,7 +255,6 @@ tmpdir
 touch
 trailing
 trap
-typst
 typstyle
 unchanged
 unexpected
