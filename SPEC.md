@@ -173,7 +173,7 @@ Typst CV compiles to PDF + plain text. Auto-rebuilds on commit. Nix flake produc
 | T50 | x | (skill: opensource/repo-scaffold) add cachix-check.sh | V44 |
 | T51 | x | (skill: opensource/licensing) add content-license note — tooling MIT, cv.typ content reserved | C19 |
 | T52 | x | (skill: lefthook/wrapper-flake-inputs) fix flake.nix — inputsFrom nix-lefthook.devShells.ci instead of packages.default (recovers 16 wrappers) | V45,B1 |
-| T53 | . | upstream pr0d1r2/nix-lefthook — expose wrappers as individual packages.lefthook-* (NOT fatten ci — bloats all consumers); keep ci lean; cvium then composes exact 34. Repos for all ~18 missing exist | V45,B1 |
+| T53 | x | upstream pr0d1r2/nix-lefthook — expose wrappers as individual packages.lefthook-* (NOT fatten ci — bloats all consumers); keep ci lean; cvium then composes exact 34. Repos for all ~18 missing exist | V45,B1 |
 | T54 | x | (strategy B) lean-trim lefthook.yml to 16 bundle-backed remotes (swap markdownlint→markdownlint-agentic); defer 18 to T52/T53; restore per-task as wrappers land | V45,B1 |
 | T55 | x | shfmt now honors .editorconfig (2-space). Wrapper fix nix-lefthook-shfmt#13 merged, bundle re-pin nix-lefthook#10 merged; cvium flake.lock bumped, local override removed, shfmt remote restored | V45 |
 | T56 | x | add `just photo <url>` — fetch github avatar, scale + pngquant-optimize, rebuild, commit on success; curl+imagemagick+pngquant in devShell; tests/photo.bats | I.cli,streamline |

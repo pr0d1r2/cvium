@@ -1,0 +1,13 @@
+[[rules]]
+glob = "*.sh"
+dirs = ["scripts"]
+test_dir = "tests"
+pattern = "mirror"
+test_ext = "bats"
+
+[[rules]]
+glob = "*.sh"
+dirs = ["nix"]
+test_dir = "tests"
+pattern = "mirror"
+test_ext = "bats"
