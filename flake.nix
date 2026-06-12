@@ -39,6 +39,7 @@
           pkgs.curl
           pkgs.imagemagick
           pkgs.pngquant
+          pkgs.qrencode
           pkgs.gnugrep
           pkgs.gnused
           pkgs.findutils

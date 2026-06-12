@@ -75,6 +75,7 @@ remotes:
 _exclude_artifacts: &exclude_artifacts
   - "cv.pdf"
   - "avatar.png"
+  - "qr.png"
   - "cv.txt"
   - "flake.lock"
   - "docs/preview-page1.png"

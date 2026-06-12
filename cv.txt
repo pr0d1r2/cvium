@@ -3,11 +3,12 @@
 
                      marcin@prodix.pl   Częstochowa, Poland   github.com/pr0d1r2   linkedin.com/in/pr0d1r2
 
-                     Engineer, 30+ years and still building for the love of it — tools, platforms, and now autonomous agents
-                     that do the work of whole teams. On my own time and fully in the open, I build an agentic AI developer
-                     ecosystem: NixOS agent nodes that open PRs, run specs, and maintain 30+ repositories on their own. At
-                     Oyster I built company-wide CI from scratch; at Toptal I coordinated 200+ engineers through platform
-                     multi-tenancy and turned team knowledge into self-service tools. I build the systems that build and
+                     Engineer, 30+ years and still building for the love of it — tools, platforms, and now
+                     autonomous agents that do the work of whole teams. On my own time and fully in the
+                     open, I build an agentic AI developer ecosystem: NixOS agent nodes that open PRs, run
+                     specs, and maintain 30+ repositories on their own. At Oyster I built company-wide CI
+                     from scratch; at Toptal I coordinated 200+ engineers through platform multi-tenancy
+                     and turned team knowledge into self-service tools. I build the systems that build and
                      maintain themselves.
 
 EXPERIENCE
