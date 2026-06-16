@@ -55,6 +55,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
 ### Fixed
 
+- Update nix-lefthook to merged upstream main: every wrapper is now an
+  individual package, all present in the ci devShell. Drop the extraHooks
+  list; inputsFrom = [ ci ] now provides every hook (T53, B1)
+- Add the narrow-language-add wrapper via upstream nix-lefthook so the
+  pre-commit add hooks resolve (T53)
 - Pass CI=true via extra-env in CI workflow so changelog-touched
   skip works with --ignore-environment
 - Add missing dictionary words (sum, instruction) and restore
