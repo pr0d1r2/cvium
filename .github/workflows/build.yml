@@ -17,6 +17,7 @@ jobs:
           devshell: ci
           skip-build: "true"
           accept-flake-config: "true"
+          extra-env: "CI=true"
           cachix-cache: pr0d1r2
           cachix-auth-token: ${{ secrets.CACHIX_AUTH_TOKEN }}
       - name: Build CV and verify content not stale

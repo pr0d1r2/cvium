@@ -4,7 +4,7 @@ setup() {
   bats_load_library bats-support
   bats_load_library bats-assert
 
-  REPO="$(cd "$(dirname "$BATS_TEST_FILENAME")/.." && pwd)"
+  REPO="$(cd "$(dirname "$BATS_TEST_FILENAME")/../.." && pwd)"
   SCRIPT="$REPO/scripts/photo.sh"
 
   export URLLOG="$BATS_TEST_TMPDIR/url.log"

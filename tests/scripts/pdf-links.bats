@@ -4,7 +4,7 @@ setup() {
   bats_load_library bats-support
   bats_load_library bats-assert
 
-  REPO="$(cd "$(dirname "$BATS_TEST_FILENAME")/.." && pwd)"
+  REPO="$(cd "$(dirname "$BATS_TEST_FILENAME")/../.." && pwd)"
   SCRIPT="$REPO/scripts/pdf-links.sh"
 
   mkdir -p "$BATS_TEST_TMPDIR/work"

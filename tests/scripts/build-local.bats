@@ -4,7 +4,7 @@ setup() {
   bats_load_library bats-support
   bats_load_library bats-assert
 
-  REPO="$(cd "$(dirname "$BATS_TEST_FILENAME")/.." && pwd)"
+  REPO="$(cd "$(dirname "$BATS_TEST_FILENAME")/../.." && pwd)"
   SCRIPT="$REPO/scripts/build-local.sh"
 
   STUB="$BATS_TEST_TMPDIR/bin"
